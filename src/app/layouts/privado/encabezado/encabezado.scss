@@ -1,0 +1,17 @@
+.encabezado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: var(--altura-header);
+
+    padding: 0 var(--espaciado-lg);
+
+    background: var(--color-superficie);
+
+    border-bottom: 1px solid #e5e7eb;
+
+}

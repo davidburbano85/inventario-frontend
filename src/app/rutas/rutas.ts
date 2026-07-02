@@ -9,8 +9,8 @@ export const RUTAS_APLICACION: Routes = [
   {
     path: 'inicio',
     loadComponent: () =>
-      import('../layouts/publico/publico/publico')
-        .then(c => c.Publico)
+      import('../layouts/privado/layout-privado/layout-privado')
+        .then(c => c.LayoutPrivado)
   },
   {
     path: '**',

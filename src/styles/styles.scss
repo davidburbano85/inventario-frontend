@@ -1,0 +1,14 @@
+/* ============================
+   Variables y configuración
+============================ */
+
+@use './temas/variables';
+@use './temas/breakpoints';
+
+/* ============================
+   Estilos base
+============================ */
+
+@use './base/reset';
+@use './base/tipografia';
+@use './base/global';

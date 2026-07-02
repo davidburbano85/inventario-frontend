@@ -1,0 +1,38 @@
+@use 'utilidades/mixins' as mixins;
+
+:host {
+
+    display: grid;
+
+    grid-template-rows: var(--altura-header) 1fr var(--altura-footer);
+
+    height: 100vh;
+
+    background: var(--color-fondo);
+
+}
+
+main {
+
+    display: grid;
+
+    grid-template-columns: var(--ancho-menu) 1fr;
+
+    overflow: hidden;
+
+}
+
+/*
+    En dispositivos móviles el menú dejará de ocupar
+    espacio en el layout y posteriormente se mostrará
+    como un Drawer.
+*/
+@include mixins.tablet {
+
+    main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

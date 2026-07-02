@@ -1,0 +1,21 @@
+/*
+    Estilos generales de la aplicación.
+*/
+
+body {
+
+    background: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    overflow-x: hidden;
+}
+
+app-root {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 100vh;
+}

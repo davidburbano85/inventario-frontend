@@ -1,0 +1,46 @@
+@use 'temas/breakpoints' as bp;
+
+/*
+    Facilita la creación de estilos responsivos
+    reutilizando los mismos breakpoints.
+*/
+
+@mixin movil {
+
+    @media (max-width: bp.$movil) {
+
+        @content;
+
+    }
+
+}
+
+@mixin tablet {
+
+    @media (max-width: bp.$tablet) {
+
+        @content;
+
+    }
+
+}
+
+@mixin portatil {
+
+    @media (max-width: bp.$portatil) {
+
+        @content;
+
+    }
+
+}
+
+@mixin escritorio {
+
+    @media (min-width: bp.$escritorio) {
+
+        @content;
+
+    }
+
+}
