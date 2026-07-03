@@ -1,0 +1,145 @@
+/*
+    Layout principal del ERP.
+
+    Header
+    Sidebar
+    Contenido
+    Footer
+*/
+/*
+===============================================================================
+ LAYOUT PRIVADO
+-------------------------------------------------------------------------------
+ Distribución principal del ERP.
+
+ Estructura
+
+ ┌──────────────────────────────────────────────┐
+ │                Encabezado                    │
+ ├───────────────┬──────────────────────────────┤
+ │               │                              │
+ │ Menú lateral  │         Contenido            │
+ │               │                              │
+ ├───────────────┴──────────────────────────────┤
+ │               Pie de página                  │
+ └──────────────────────────────────────────────┘
+===============================================================================
+*/
+
+.layout-privado {
+
+    display: grid;
+
+    grid-template-rows:
+
+        var(--altura-header)
+
+        1fr
+
+        var(--altura-footer);
+
+    height: 100vh;
+
+    background: var(--color-fondo);
+
+}
+
+/*==============================================================================
+    Área principal
+==============================================================================*/
+
+.layout-privado-principal {
+
+    display: grid;
+
+    grid-template-columns:
+
+        var(--ancho-menu)
+
+        1fr;
+
+    overflow: hidden;
+
+}
+
+/*==============================================================================
+    Menú lateral
+==============================================================================*/
+
+.layout-privado-menu {
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+}
+
+/*==============================================================================
+    Contenido
+==============================================================================*/
+
+.layout-privado-contenido {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+}
+
+/*==============================================================================
+    Scroll personalizado
+==============================================================================*/
+
+.layout-privado-menu::-webkit-scrollbar,
+.layout-privado-contenido::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.layout-privado-menu::-webkit-scrollbar-thumb,
+.layout-privado-contenido::-webkit-scrollbar-thumb {
+
+    background: #d1d5db;
+
+    border-radius: 999px;
+
+}
+
+/*==============================================================================
+    Tablet
+==============================================================================*/
+
+@media (max-width:992px){
+
+    .layout-privado-principal{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*==============================================================================
+    Móvil
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .layout-privado{
+
+        grid-template-rows:
+
+            var(--altura-header)
+
+            1fr
+
+            auto;
+
+    }
+
+}

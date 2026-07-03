@@ -1,0 +1,85 @@
+/*
+===============================================================================
+ DISPLAY
+-------------------------------------------------------------------------------
+ Utilidades para controlar el tipo de visualización.
+===============================================================================
+*/
+
+.d-none {
+
+    display: none !important;
+
+}
+
+.d-block {
+
+    display: block !important;
+
+}
+
+.d-inline {
+
+    display: inline !important;
+
+}
+
+.d-inline-block {
+
+    display: inline-block !important;
+
+}
+
+.d-flex {
+
+    display: flex !important;
+
+}
+
+.d-inline-flex {
+
+    display: inline-flex !important;
+
+}
+
+.d-grid {
+
+    display: grid !important;
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .d-none-mobile{
+
+        display:none !important;
+
+    }
+
+    .d-block-mobile{
+
+        display:block !important;
+
+    }
+
+    .d-flex-mobile{
+
+        display:flex !important;
+
+    }
+
+}
+
+@media (min-width:769px){
+
+    .d-none-desktop{
+
+        display:none !important;
+
+    }
+
+}

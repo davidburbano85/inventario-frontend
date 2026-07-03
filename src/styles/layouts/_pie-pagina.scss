@@ -1,0 +1,180 @@
+/*
+    Pie de página
+    de la aplicación.
+*/
+/*
+===============================================================================
+ PIE DE PÁGINA
+-------------------------------------------------------------------------------
+ Pie global de la aplicación.
+
+ Contiene:
+
+ - Información del sistema
+ - Versión
+ - Derechos de autor
+ - Enlaces
+===============================================================================
+*/
+
+.pie-pagina {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 100%;
+
+    min-height: var(--altura-footer);
+
+    padding: 0 var(--espaciado-lg);
+
+    background: var(--color-superficie);
+
+    border-top: 1px solid #e5e7eb;
+
+    font-size: .85rem;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Lado izquierdo
+==============================================================================*/
+
+.pie-pagina-izquierdo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    flex-wrap: wrap;
+
+}
+
+/*==============================================================================
+    Lado derecho
+==============================================================================*/
+
+.pie-pagina-derecho {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+
+}
+
+/*==============================================================================
+    Enlaces
+==============================================================================*/
+
+.pie-pagina-enlace {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: color .20s ease;
+
+}
+
+.pie-pagina-enlace:hover {
+
+    color: var(--color-primario);
+
+}
+
+/*==============================================================================
+    Versión
+==============================================================================*/
+
+.pie-pagina-version {
+
+    padding: .20rem .55rem;
+
+    border-radius: .40rem;
+
+    background: #f3f4f6;
+
+    font-size: .75rem;
+
+    font-weight: 600;
+
+}
+
+/*==============================================================================
+    Separador
+==============================================================================*/
+
+.pie-pagina-separador {
+
+    width: 1px;
+
+    height: 16px;
+
+    background: #d1d5db;
+
+}
+
+/*==============================================================================
+    Responsive Tablet
+==============================================================================*/
+
+@media (max-width:992px){
+
+    .pie-pagina{
+
+        padding:0 1rem;
+
+    }
+
+}
+
+/*==============================================================================
+    Responsive Móvil
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .pie-pagina{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:.75rem;
+
+        padding:1rem;
+
+        text-align:center;
+
+    }
+
+    .pie-pagina-izquierdo,
+
+    .pie-pagina-derecho{
+
+        justify-content:center;
+
+    }
+
+    .pie-pagina-separador{
+
+        display:none;
+
+    }
+
+}

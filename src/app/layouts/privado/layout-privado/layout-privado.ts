@@ -12,7 +12,7 @@ import { Contenido } from '../contenido/contenido';
 @Component({
   selector: 'app-layout-privado',
   standalone: true,
-  imports: [RouterOutlet, Encabezado, MenuLateral, PiePagina, Contenido],
+  imports: [RouterOutlet, Encabezado, MenuLateral, PiePagina],
   templateUrl: './layout-privado.html',
   styleUrl: './layout-privado.scss'
 })

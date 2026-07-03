@@ -1,0 +1,280 @@
+/*
+    Indicadores de carga.
+
+    Spinner
+    Barra de progreso
+    Skeleton
+*/
+/*
+===============================================================================
+ SPINNERS Y ESTADOS DE CARGA
+-------------------------------------------------------------------------------
+ Componentes soportados
+
+ - spinner
+ - spinner pequeño
+ - spinner grande
+ - overlay
+ - loader de página
+ - skeleton
+===============================================================================
+*/
+
+/*==============================================================================
+    Spinner Base
+==============================================================================*/
+
+.spinner {
+
+    display: inline-block;
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    border: .30rem solid #e5e7eb;
+
+    border-top-color: var(--color-primario);
+
+    border-radius: 50%;
+
+    animation: spinner-girar .8s linear infinite;
+
+}
+
+/*==============================================================================
+    Tamaños
+==============================================================================*/
+
+.spinner-sm {
+
+    width: 1rem;
+
+    height: 1rem;
+
+    border-width: .15rem;
+
+}
+
+.spinner-md {
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+}
+
+.spinner-lg {
+
+    width: 4rem;
+
+    height: 4rem;
+
+    border-width: .45rem;
+
+}
+
+/*==============================================================================
+    Contenedor
+==============================================================================*/
+
+.spinner-contenedor {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 2rem;
+
+}
+
+/*==============================================================================
+    Overlay
+==============================================================================*/
+
+.spinner-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,.75);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 100;
+
+}
+
+/*==============================================================================
+    Página completa
+==============================================================================*/
+
+.spinner-pagina {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,.85);
+
+    backdrop-filter: blur(3px);
+
+    z-index: 9999;
+
+}
+
+/*==============================================================================
+    Texto
+==============================================================================*/
+
+.spinner-texto {
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    font-size: .90rem;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Skeleton
+==============================================================================*/
+
+.skeleton {
+
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #f3f4f6 25%,
+        #e5e7eb 50%,
+        #f3f4f6 75%
+    );
+
+    background-size: 400% 100%;
+
+    border-radius: .50rem;
+
+    animation: skeleton-carga 1.4s ease infinite;
+
+}
+
+.skeleton-texto {
+
+    height: 1rem;
+
+    margin-bottom: .75rem;
+
+}
+
+.skeleton-titulo {
+
+    height: 1.5rem;
+
+    width: 60%;
+
+    margin-bottom: 1rem;
+
+}
+
+.skeleton-avatar {
+
+    width: 64px;
+
+    height: 64px;
+
+    border-radius: 50%;
+
+}
+
+.skeleton-boton {
+
+    width: 140px;
+
+    height: 42px;
+
+    border-radius: .50rem;
+
+}
+
+.skeleton-tarjeta {
+
+    width: 100%;
+
+    height: 180px;
+
+    border-radius: .75rem;
+
+}
+
+/*==============================================================================
+    Animaciones
+==============================================================================*/
+
+@keyframes spinner-girar {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes skeleton-carga {
+
+    0% {
+
+        background-position: 100% 0;
+
+    }
+
+    100% {
+
+        background-position: -100% 0;
+
+    }
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .spinner-lg{
+
+        width:3rem;
+
+        height:3rem;
+
+    }
+
+}

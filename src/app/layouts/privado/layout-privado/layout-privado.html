@@ -1,17 +1,47 @@
-<!-- Layout principal del ERP -->
+<!-- ==========================================================
+ Layout Principal Privado
+=========================================================== -->
 
-<app-encabezado />
+<main class="layout-privado">
 
-<main>
+    <!-- Encabezado -->
+    <app-encabezado />
 
-    <app-menu-lateral />
+    <!-- Área principal -->
+    <section class="layout-privado-principal">
 
-    <app-contenido />
+        <!-- Menú -->
+        <aside class="layout-privado-menu">
 
-    <section class="contenido">
-        <router-outlet></router-outlet>
+            <app-menu-lateral />
+
+        </aside>
+
+        <!-- Contenido -->
+        <section class="layout-privado-contenido">
+
+            <!-- Barra de herramientas -->
+            <!-- <app-barra-herramientas /> -->
+
+            <!-- Breadcrumb -->
+            <!-- <app-breadcrumb /> -->
+
+            <!-- Alertas -->
+            <!-- <app-alertas /> -->
+
+            <main class="contenido overflow-auto">
+
+                
+
+                <router-outlet />
+
+            </main>
+
+        </section>
+
     </section>
 
-</main>
+    <!-- Pie -->
+    <app-pie-pagina />
 
-<app-pie-pagina />
+</main>

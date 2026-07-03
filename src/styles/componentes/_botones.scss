@@ -1,0 +1,279 @@
+/*
+    Estilos base para todos los botones del sistema.
+
+    Incluye:
+    - botón primario
+    - secundario
+    - éxito
+    - advertencia
+    - peligro
+    - icon button
+    - botón deshabilitado
+*/
+
+/*
+===============================================================================
+ BOTONES GLOBALES
+-------------------------------------------------------------------------------
+ Contiene todos los estilos reutilizables para botones del sistema.
+
+ Clases disponibles:
+
+ .btn
+ .btn-primario
+ .btn-secundario
+ .btn-exito
+ .btn-advertencia
+ .btn-peligro
+ .btn-texto
+ .btn-icono
+
+ Tamaños
+
+ .btn-sm
+ .btn-md
+ .btn-lg
+
+ Estados
+
+ :hover
+ :active
+ :disabled
+===============================================================================
+*/
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    padding: .70rem 1.25rem;
+
+    border: none;
+
+    border-radius: .5rem;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    white-space: nowrap;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        transform .15s ease,
+        box-shadow .25s ease;
+
+}
+
+/*==============================================================================
+    Estados
+==============================================================================*/
+
+.btn:hover {
+
+    transform: translateY(-1px);
+
+}
+
+.btn:active {
+
+    transform: scale(.98);
+
+}
+
+.btn:disabled {
+
+    opacity: .55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+/*==============================================================================
+    Tamaños
+==============================================================================*/
+
+.btn-sm {
+
+    padding: .45rem .80rem;
+
+    font-size: .80rem;
+
+}
+
+.btn-md {
+
+    padding: .70rem 1.25rem;
+
+}
+
+.btn-lg {
+
+    padding: .90rem 1.75rem;
+
+    font-size: 1rem;
+
+}
+
+/*==============================================================================
+    Botón Primario
+==============================================================================*/
+
+.btn-primario {
+
+    background: var(--color-primario);
+
+    color: white;
+
+}
+
+.btn-primario:hover {
+
+    filter: brightness(.92);
+
+}
+
+/*==============================================================================
+    Botón Secundario
+==============================================================================*/
+
+.btn-secundario {
+
+    background: var(--color-secundario);
+
+    color: white;
+
+}
+
+.btn-secundario:hover {
+
+    filter: brightness(.92);
+
+}
+
+/*==============================================================================
+    Éxito
+==============================================================================*/
+
+.btn-exito {
+
+    background: #16a34a;
+
+    color: white;
+
+}
+
+.btn-exito:hover {
+
+    filter: brightness(.92);
+
+}
+
+/*==============================================================================
+    Advertencia
+==============================================================================*/
+
+.btn-advertencia {
+
+    background: #f59e0b;
+
+    color: white;
+
+}
+
+.btn-advertencia:hover {
+
+    filter: brightness(.92);
+
+}
+
+/*==============================================================================
+    Peligro
+==============================================================================*/
+
+.btn-peligro {
+
+    background: #dc2626;
+
+    color: white;
+
+}
+
+.btn-peligro:hover {
+
+    filter: brightness(.92);
+
+}
+
+/*==============================================================================
+    Botón Texto
+==============================================================================*/
+
+.btn-texto {
+
+    background: transparent;
+
+    color: var(--color-primario);
+
+}
+
+.btn-texto:hover {
+
+    background: rgba(37, 99, 235, .08);
+
+}
+
+/*==============================================================================
+    Botón Icono
+==============================================================================*/
+
+.btn-icono {
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+}
+
+/*==============================================================================
+    Ancho completo
+==============================================================================*/
+
+.btn-bloque {
+
+    display: flex;
+
+    width: 100%;
+
+}
+
+/*==============================================================================
+    Spinner interno
+
+    Se utilizará cuando un botón esté ejecutando una acción.
+==============================================================================*/
+
+.btn-cargando {
+
+    pointer-events: none;
+
+    opacity: .8;
+
+}

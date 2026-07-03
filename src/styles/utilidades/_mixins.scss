@@ -1,46 +1,163 @@
-@use 'temas/breakpoints' as bp;
+//  Mixins reutilizables para toda la aplicación.
+//  Depende de _breakpoints.scss
+//==============================================================================
 
-/*
-    Facilita la creación de estilos responsivos
-    reutilizando los mismos breakpoints.
-*/
+@use "../temas/breakpoints" as bp;
 
-@mixin movil {
+/*==============================================================================
+    Flex
+==============================================================================*/
 
-    @media (max-width: bp.$movil) {
+@mixin flex(
+    $direccion: row,
+    $justify: flex-start,
+    $align: stretch,
+    $gap: 0
+) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
 
-        @content;
+@mixin flex-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@mixin flex-entre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*==============================================================================
+    Grid
+==============================================================================*/
+
+@mixin grid(
+    $columnas: 1,
+    $gap: var(--espaciado-md)
+) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
+/*==============================================================================
+    Contenedor
+==============================================================================*/
+
+@mixin contenedor($ancho: 1200px) {
+    width: min(100%, $ancho);
+    margin-inline: auto;
+    padding-inline: var(--espaciado-md);
+}
+
+/*==============================================================================
+    Tarjeta
+==============================================================================*/
+
+@mixin tarjeta {
+    background: var(--color-superficie);
+    border: var(--borde-fino);
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-sm);
+}
+
+/*==============================================================================
+    Botón Base
+==============================================================================*/
+
+@mixin boton-base {
+    border: none;
+    border-radius: var(--radio-md);
+    padding: .75rem 1rem;
+    cursor: pointer;
+    transition: var(--transicion-normal);
+    font: inherit;
+}
+
+/*==============================================================================
+    Texto truncado
+==============================================================================*/
+
+@mixin texto-truncado {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*==============================================================================
+    Scroll personalizado
+==============================================================================*/
+
+@mixin scroll {
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
     }
 
+    &::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@mixin movil {
+    @include bp.movil {
+        @content;
+    }
 }
 
 @mixin tablet {
-
-    @media (max-width: bp.$tablet) {
-
+    @include bp.tablet {
         @content;
-
     }
-
 }
 
 @mixin portatil {
-
-    @media (max-width: bp.$portatil) {
-
+    @include bp.portatil {
         @content;
-
     }
-
 }
 
 @mixin escritorio {
-
-    @media (min-width: bp.$escritorio) {
-
+    @include bp.escritorio {
         @content;
-
     }
+}
 
+@mixin tablet-y-menor {
+    @include bp.tablet-y-menor {
+        @content;
+    }
+}
+
+@mixin portatil-y-menor {
+    @include bp.portatil-y-menor {
+        @content;
+    }
+}
+
+@mixin tablet-y-mayor {
+    @include bp.tablet-y-mayor {
+        @content;
+    }
+}
+
+@mixin portatil-y-mayor {
+    @include bp.portatil-y-mayor {
+        @content;
+    }
 }

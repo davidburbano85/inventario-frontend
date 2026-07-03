@@ -1,0 +1,176 @@
+/*
+    Layout para autenticación
+    y páginas públicas.
+*/
+/*
+===============================================================================
+ LAYOUT PÚBLICO
+-------------------------------------------------------------------------------
+ Utilizado por:
+
+ - Login
+ - Recuperar contraseña
+ - Restablecer contraseña
+ - Registro
+===============================================================================
+*/
+
+.layout-publico {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 2rem;
+
+    background: var(--color-fondo);
+
+}
+
+/*==============================================================================
+    Contenedor principal
+==============================================================================*/
+
+.layout-publico-contenedor {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: var(--color-superficie);
+
+    border-radius: 1rem;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .10);
+
+}
+
+/*==============================================================================
+    Panel informativo
+==============================================================================*/
+
+.layout-publico-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 3rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primario),
+        #1d4ed8
+    );
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.layout-publico-logo {
+
+    margin-bottom: 2rem;
+
+}
+
+.layout-publico-titulo {
+
+    margin-bottom: 1rem;
+
+    font-size: 2.25rem;
+
+    font-weight: 700;
+
+}
+
+.layout-publico-texto {
+
+    max-width: 420px;
+
+    line-height: 1.8;
+
+    opacity: .9;
+
+}
+
+/*==============================================================================
+    Formulario
+==============================================================================*/
+
+.layout-publico-formulario {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 3rem;
+
+}
+
+/*==============================================================================
+    Caja formulario
+==============================================================================*/
+
+.layout-publico-caja {
+
+    width: 100%;
+
+    max-width: 420px;
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:992px){
+
+    .layout-publico-contenedor{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .layout-publico-panel{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .layout-publico{
+
+        padding:1rem;
+
+    }
+
+    .layout-publico-formulario{
+
+        padding:2rem;
+
+    }
+
+}

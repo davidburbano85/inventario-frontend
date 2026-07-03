@@ -1,0 +1,252 @@
+/*
+    Tarjetas reutilizables.
+
+    Se utilizarán para:
+
+    - Dashboard
+    - Productos
+    - Resúmenes
+    - Estadísticas
+*/
+/*
+===============================================================================
+ TARJETAS GLOBALES
+-------------------------------------------------------------------------------
+ Componentes soportados
+
+ - tarjeta
+ - encabezado
+ - contenido
+ - pie
+ - acciones
+ - estados
+===============================================================================
+*/
+
+.tarjeta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    background: var(--color-superficie);
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: .75rem;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow .25s ease,
+        transform .20s ease;
+
+}
+
+.tarjeta:hover {
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.tarjeta-elevada {
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+
+}
+
+.tarjeta-borde {
+
+    border-left: 5px solid var(--color-primario);
+
+}
+
+/*==============================================================================
+    Encabezado
+==============================================================================*/
+
+.tarjeta-encabezado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem 1.25rem;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.tarjeta-titulo {
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: var(--color-texto);
+
+}
+
+.tarjeta-subtitulo {
+
+    margin-top: .25rem;
+
+    font-size: .85rem;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Contenido
+==============================================================================*/
+
+.tarjeta-contenido {
+
+    flex: 1;
+
+    padding: 1.25rem;
+
+}
+
+/*==============================================================================
+    Pie
+==============================================================================*/
+
+.tarjeta-pie {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    padding: 1rem 1.25rem;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+/*==============================================================================
+    Acciones
+==============================================================================*/
+
+.tarjeta-acciones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .50rem;
+
+}
+
+/*==============================================================================
+    Tarjetas Dashboard
+==============================================================================*/
+
+.tarjeta-dashboard {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.tarjeta-dashboard h2 {
+
+    margin-bottom: .40rem;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+}
+
+.tarjeta-dashboard p {
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Estados
+==============================================================================*/
+
+.tarjeta-exito {
+
+    border-left: 5px solid #16a34a;
+
+}
+
+.tarjeta-advertencia {
+
+    border-left: 5px solid #f59e0b;
+
+}
+
+.tarjeta-peligro {
+
+    border-left: 5px solid #dc2626;
+
+}
+
+.tarjeta-informacion {
+
+    border-left: 5px solid var(--color-primario);
+
+}
+
+/*==============================================================================
+    Compacta
+==============================================================================*/
+
+.tarjeta-compacta .tarjeta-contenido {
+
+    padding: .75rem;
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .tarjeta-encabezado{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .tarjeta-pie{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .tarjeta-dashboard{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}

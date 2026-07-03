@@ -1,3 +1,61 @@
-<nav>
-    Menú lateral
+<nav class="menu-lateral">
+
+    <div class="menu-lateral-nav">
+
+        @for (grupo of servicioMenu.grupos(); track grupo.id) {
+
+        <section class="menu-grupo">
+
+            <button
+                type="button"
+                class="menu-grupo-boton"
+                (click)="alternarGrupo(grupo.id)">
+
+                <span class="menu-grupo-titulo">
+                    {{ grupo.titulo }}
+                </span>
+
+                <span
+                    class="material-symbols-outlined menu-grupo-flecha"
+                    [class.expandido]="grupo.expandido">
+
+                    expand_more
+
+                </span>
+
+            </button>
+
+            @if (grupo.expandido) {
+
+            <div class="submenu">
+
+                @for (item of grupo.items; track item.id) {
+
+                <a
+                    class="menu-item"
+                    [routerLink]="item.ruta"
+                    routerLinkActive="activo">
+
+                    <span class="material-symbols-outlined menu-item-icono">
+                        {{ item.icono }}
+                    </span>
+
+                    <span class="menu-item-texto">
+                        {{ item.titulo }}
+                    </span>
+
+                </a>
+
+                }
+
+            </div>
+
+            }
+
+        </section>
+
+        }
+
+    </div>
+
 </nav>

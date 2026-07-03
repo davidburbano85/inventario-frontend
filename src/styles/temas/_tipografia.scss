@@ -1,0 +1,261 @@
+/*
+    Escala tipográfica.
+
+    h1-h6
+    párrafos
+    etiquetas
+*/
+/*
+===============================================================================
+ TIPOGRAFÍA
+-------------------------------------------------------------------------------
+ Escala tipográfica oficial del sistema.
+===============================================================================
+*/
+
+:root {
+
+    /*==========================================================================
+        Familia tipográfica
+    ==========================================================================*/
+
+    --fuente-principal:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    --fuente-monospace:
+        "JetBrains Mono",
+        Consolas,
+        monospace;
+
+    /*==========================================================================
+        Tamaños
+    ==========================================================================*/
+
+    --texto-xs: .75rem;
+
+    --texto-sm: .875rem;
+
+    --texto-md: 1rem;
+
+    --texto-lg: 1.125rem;
+
+    --texto-xl: 1.25rem;
+
+    --texto-2xl: 1.50rem;
+
+    --texto-3xl: 2rem;
+
+    --texto-4xl: 2.50rem;
+
+    /*==========================================================================
+        Peso
+    ==========================================================================*/
+
+    --peso-ligero: 300;
+
+    --peso-normal: 400;
+
+    --peso-medio: 500;
+
+    --peso-semibold: 600;
+
+    --peso-bold: 700;
+
+    --peso-extra-bold: 800;
+
+    /*==========================================================================
+        Altura de línea
+    ==========================================================================*/
+
+    --linea-xs: 1;
+
+    --linea-sm: 1.25;
+
+    --linea-md: 1.5;
+
+    --linea-lg: 1.75;
+
+    --linea-xl: 2;
+
+}
+
+/*==============================================================================
+    Encabezados
+==============================================================================*/
+
+h1,
+.h1 {
+
+    font-size: var(--texto-4xl);
+
+    font-weight: var(--peso-bold);
+
+    line-height: var(--linea-sm);
+
+}
+
+h2,
+.h2 {
+
+    font-size: var(--texto-3xl);
+
+    font-weight: var(--peso-bold);
+
+    line-height: var(--linea-sm);
+
+}
+
+h3,
+.h3 {
+
+    font-size: var(--texto-2xl);
+
+    font-weight: var(--peso-semibold);
+
+    line-height: var(--linea-md);
+
+}
+
+h4,
+.h4 {
+
+    font-size: var(--texto-xl);
+
+    font-weight: var(--peso-semibold);
+
+    line-height: var(--linea-md);
+
+}
+
+h5,
+.h5 {
+
+    font-size: var(--texto-lg);
+
+    font-weight: var(--peso-semibold);
+
+    line-height: var(--linea-md);
+
+}
+
+h6,
+.h6 {
+
+    font-size: var(--texto-md);
+
+    font-weight: var(--peso-semibold);
+
+    line-height: var(--linea-md);
+
+}
+
+/*==============================================================================
+    Texto
+==============================================================================*/
+
+p {
+
+    font-size: var(--texto-md);
+
+    line-height: var(--linea-lg);
+
+}
+
+small,
+.texto-pequeno {
+
+    font-size: var(--texto-sm);
+
+}
+
+.texto-extra-pequeno {
+
+    font-size: var(--texto-xs);
+
+}
+
+.texto-grande {
+
+    font-size: var(--texto-lg);
+
+}
+
+.texto-extra-grande {
+
+    font-size: var(--texto-xl);
+
+}
+
+/*==============================================================================
+    Utilidades
+==============================================================================*/
+
+.texto-ligero {
+
+    font-weight: var(--peso-ligero);
+
+}
+
+.texto-normal {
+
+    font-weight: var(--peso-normal);
+
+}
+
+.texto-medio {
+
+    font-weight: var(--peso-medio);
+
+}
+
+.texto-semibold {
+
+    font-weight: var(--peso-semibold);
+
+}
+
+.texto-bold {
+
+    font-weight: var(--peso-bold);
+
+}
+
+.texto-extra-bold {
+
+    font-weight: var(--peso-extra-bold);
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px){
+
+    h1,
+    .h1{
+
+        font-size:2rem;
+
+    }
+
+    h2,
+    .h2{
+
+        font-size:1.75rem;
+
+    }
+
+    h3,
+    .h3{
+
+        font-size:1.50rem;
+
+    }
+
+}

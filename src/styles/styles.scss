@@ -1,14 +1,56 @@
-/* ============================
-   Variables y configuración
-============================ */
 
-@use './temas/variables';
-@use './temas/breakpoints';
 
-/* ============================
-   Estilos base
-============================ */
+/* ==========================================================================
+   Base
+========================================================================== */
 
-@use './base/reset';
-@use './base/tipografia';
-@use './base/global';
+@use "./base/reset";
+@use "./base/global";
+
+/* ==========================================================================
+   Componentes
+========================================================================== */
+
+@use "./componentes/alertas";
+@use "./componentes/badges";
+@use "./componentes/botones";
+@use "./componentes/formularios";
+@use "./componentes/modales";
+@use "./componentes/spinner";
+@use "./componentes/tablas";
+@use "./componentes/tarjetas";
+
+/* ==========================================================================
+   Layouts
+========================================================================== */
+@use "./layouts/contenido";
+@use "./layouts/encabezados";
+@use "./layouts/layout-publico";
+@use "./layouts/layout-privado";
+@use "./layouts/menu-lateral";
+@use "./layouts/pie-pagina";
+
+/* ==========================================================================
+   Temas
+========================================================================== */
+
+@use "./temas/bordes";
+@use "./temas/colores";
+@use "./temas/espaciados";
+@use "./temas/sombras";
+@use "./temas/variables";
+@use "./temas/breakpoints";
+@use "./temas/tipografia";
+@use "./temas/z-index";
+
+
+
+
+/* ==========================================================================
+   Utilidades
+========================================================================== */
+
+@use "./utilidades/display";
+@use "./utilidades/funciones";
+@use "./utilidades/helpers";
+@use "./utilidades/mixins";

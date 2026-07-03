@@ -1,4 +1,61 @@
+
+/*==============================================================================
+    Variables
+==============================================================================*/
+
 $movil: 576px;
 $tablet: 768px;
 $portatil: 992px;
 $escritorio: 1200px;
+
+/*==============================================================================
+    Mixins Responsive
+==============================================================================*/
+
+@mixin movil {
+    @media (max-width: $movil) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: ($movil + 1)) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin portatil {
+    @media (min-width: ($tablet + 1)) and (max-width: $portatil) {
+        @content;
+    }
+}
+
+@mixin escritorio {
+    @media (min-width: ($escritorio)) {
+        @content;
+    }
+}
+
+@mixin tablet-y-menor {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin portatil-y-menor {
+    @media (max-width: $portatil) {
+        @content;
+    }
+}
+
+@mixin tablet-y-mayor {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin portatil-y-mayor {
+    @media (min-width: $portatil) {
+        @content;
+    }
+}

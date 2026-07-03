@@ -1,27 +1,26 @@
-@use 'utilidades/mixins' as mixins;
-
-:host {
-
-    display: block;
-
-    width: var(--ancho-menu);
-
-    height: 100%;
-
-    background: var(--color-superficie);
-
-    border-right: 1px solid #e5e7eb;
-
-    overflow-y: auto;
-
+:host{
+    display:block;
 }
 
-@include mixins.tablet {
+.menu-grupo-boton{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    :host {
+    width:100%;
 
-        display: none;
+    padding:0 1.5rem .5rem;
 
-    }
+    background:none;
+    border:none;
 
+    cursor:pointer;
+}
+
+.menu-grupo-flecha{
+    transition:.25s;
+}
+
+.menu-grupo-flecha.expandido{
+    transform:rotate(180deg);
 }

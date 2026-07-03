@@ -1,0 +1,123 @@
+// /*==============================================================================
+//  Archivo: src/styles/utilidades/_responsive.scss
+
+//  Utilidades responsive reutilizables para toda la aplicación.
+// ==============================================================================*/
+
+// @use "../temas/breakpoints" as bp;
+
+// /*==============================================================================
+//     Ocultar por dispositivo
+// ==============================================================================*/
+
+// .ocultar-escritorio {
+
+//     @include bp.escritorio {
+//         display: none !important;
+//     }
+
+// }
+
+// .ocultar-portatil {
+
+//     @include bp.portatil {
+//         display: none !important;
+//     }
+
+// }
+
+// .ocultar-tablet {
+
+//     @include bp.tablet {
+//         display: none !important;
+//     }
+
+// }
+
+// .ocultar-movil {
+
+//     @include bp.movil {
+//         display: none !important;
+//     }
+
+// }
+
+// /*==============================================================================
+//     Visible únicamente por dispositivo
+// ==============================================================================*/
+
+// .solo-escritorio {
+
+//     display: none !important;
+
+//     @include bp.escritorio {
+//         display: block !important;
+//     }
+
+// }
+
+// .solo-portatil {
+
+//     display: none !important;
+
+//     @include bp.portatil {
+//         display: block !important;
+//     }
+
+// }
+
+// .solo-tablet {
+
+//     display: none !important;
+
+//     @include bp.tablet {
+//         display: block !important;
+//     }
+
+// }
+
+// .solo-movil {
+
+//     display: none !important;
+
+//     @include bp.movil {
+//         display: block !important;
+//     }
+
+// }
+
+// /*==============================================================================
+//     Flex Responsive
+// ==============================================================================*/
+
+// .flex-movil {
+
+//     @include bp.movil {
+//         display: flex !important;
+//     }
+
+// }
+
+// .flex-tablet {
+
+//     @include bp.tablet {
+//         display: flex !important;
+//     }
+
+// }
+
+// .flex-portatil {
+
+//     @include bp.portatil {
+//         display: flex !important;
+//     }
+
+// }
+
+// .flex-escritorio {
+
+//     @include bp.escritorio {
+//         display: flex !important;
+//     }
+
+// }

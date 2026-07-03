@@ -1,0 +1,306 @@
+/*
+    Tabla responsive del sistema.
+
+    Incluye:
+
+    - encabezados
+    - filas
+    - hover
+    - paginación
+    - ordenamiento
+*/
+
+/*
+===============================================================================
+ TABLAS GLOBALES
+-------------------------------------------------------------------------------
+ Componentes soportados
+
+ - tabla
+ - encabezado
+ - cuerpo
+ - hover
+ - zebra
+ - acciones
+ - responsive
+ - estados
+===============================================================================
+*/
+
+.tabla-contenedor {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: .75rem;
+
+    background: var(--color-superficie);
+
+    border: 1px solid #e5e7eb;
+
+}
+
+.tabla {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+
+}
+
+.tabla caption {
+
+    padding: 1rem;
+
+    text-align: left;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+}
+
+.tabla thead {
+
+    background: #f8fafc;
+
+}
+
+.tabla thead th {
+
+    padding: 1rem;
+
+    text-align: left;
+
+    font-size: .90rem;
+
+    font-weight: 700;
+
+    color: #374151;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.tabla tbody td {
+
+    padding: .90rem 1rem;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+
+}
+
+.tabla tbody tr {
+
+    transition: background-color .20s ease;
+
+}
+
+.tabla-hover tbody tr:hover {
+
+    background: rgba(37,99,235,.05);
+
+}
+
+.tabla-zebra tbody tr:nth-child(even) {
+
+    background: #fafafa;
+
+}
+
+.tabla tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+/*==============================================================================
+    Alineaciones
+==============================================================================*/
+
+.texto-centro {
+
+    text-align: center;
+
+}
+
+.texto-derecha {
+
+    text-align: right;
+
+}
+
+.texto-izquierda {
+
+    text-align: left;
+
+}
+
+/*==============================================================================
+    Acciones
+==============================================================================*/
+
+.columna-acciones {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: .50rem;
+
+}
+
+/*==============================================================================
+    Ordenamiento
+==============================================================================*/
+
+.columna-ordenable {
+
+    cursor: pointer;
+
+    user-select: none;
+
+}
+
+.columna-ordenable:hover {
+
+    background: rgba(37,99,235,.06);
+
+}
+
+/*==============================================================================
+    Estados
+==============================================================================*/
+
+.fila-seleccionada {
+
+    background: rgba(37,99,235,.08);
+
+}
+
+.fila-error {
+
+    background: rgba(220,38,38,.08);
+
+}
+
+.fila-exito {
+
+    background: rgba(22,163,74,.08);
+
+}
+
+.fila-advertencia {
+
+    background: rgba(245,158,11,.08);
+
+}
+
+/*==============================================================================
+    Sin registros
+==============================================================================*/
+
+.sin-registros {
+
+    padding: 2rem;
+
+    text-align: center;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Paginación
+==============================================================================*/
+
+.paginacion {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+.paginacion-info {
+
+    font-size: .85rem;
+
+    color: #6b7280;
+
+}
+
+.paginacion-botones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .50rem;
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px) {
+
+    .tabla {
+
+        min-width: 650px;
+
+    }
+
+}
+
+/*==============================================================================
+    Compacta
+==============================================================================*/
+
+.tabla-compacta thead th,
+.tabla-compacta tbody td {
+
+    padding: .60rem .75rem;
+
+}
+
+/*==============================================================================
+    Grande
+==============================================================================*/
+
+.tabla-grande thead th,
+.tabla-grande tbody td {
+
+    padding: 1.25rem;
+
+}
+
+/*==============================================================================
+    Cargando
+==============================================================================*/
+
+.tabla-cargando {
+
+    opacity: .60;
+
+    pointer-events: none;
+
+}

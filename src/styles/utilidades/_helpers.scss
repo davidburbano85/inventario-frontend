@@ -1,0 +1,180 @@
+/*==============================================================================
+ Archivo: src/styles/utilidades/_helpers.scss
+
+ Clases utilitarias reutilizables en toda la aplicación.
+==============================================================================*/
+
+/*==============================================================================
+    Overflow
+==============================================================================*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+/*==============================================================================
+    Posición
+==============================================================================*/
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+/*==============================================================================
+    Cursores
+==============================================================================*/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+/*==============================================================================
+    Selección
+==============================================================================*/
+
+.user-select-none {
+    user-select: none;
+}
+
+.user-select-all {
+    user-select: all;
+}
+
+/*==============================================================================
+    Visibilidad
+==============================================================================*/
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/*==============================================================================
+    Opacidad
+==============================================================================*/
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-25 {
+    opacity: .25;
+}
+
+.opacity-50 {
+    opacity: .50;
+}
+
+.opacity-75 {
+    opacity: .75;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+/*==============================================================================
+    Sombras
+==============================================================================*/
+
+.sombra-xs {
+    box-shadow: var(--sombra-xs);
+}
+
+.sombra-sm {
+    box-shadow: var(--sombra-sm);
+}
+
+.sombra-md {
+    box-shadow: var(--sombra-md);
+}
+
+.sombra-lg {
+    box-shadow: var(--sombra-lg);
+}
+
+.sombra-xl {
+    box-shadow: var(--sombra-xl);
+}
+
+/*==============================================================================
+    Bordes
+==============================================================================*/
+
+.borde {
+    border: var(--borde-fino);
+}
+
+.borde-redondeado {
+    border-radius: var(--radio-md);
+}
+
+.borde-circular {
+    border-radius: 50%;
+}
+
+/*==============================================================================
+    Texto
+==============================================================================*/
+
+.texto-truncado {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.texto-romper {
+    overflow-wrap: break-word;
+}
+
+.texto-nowrap {
+    white-space: nowrap;
+}
+
+/*==============================================================================
+    Interacción
+==============================================================================*/
+
+.deshabilitado {
+    pointer-events: none;
+    opacity: var(--opacidad-deshabilitado);
+}
+
+.oculto {
+    display: none !important;
+}

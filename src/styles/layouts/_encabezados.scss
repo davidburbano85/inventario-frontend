@@ -1,0 +1,223 @@
+/*
+    Estilos globales
+    del encabezado.
+*/
+/*
+===============================================================================
+ ENCABEZADO
+-------------------------------------------------------------------------------
+ Barra superior de la aplicación.
+
+ Contiene:
+
+ - Logo
+ - Título
+ - Buscador
+ - Acciones
+ - Usuario
+===============================================================================
+*/
+
+.encabezado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 100%;
+
+    height: var(--altura-header);
+
+    padding: 0 var(--espaciado-lg);
+
+    background: var(--color-superficie);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+/*==============================================================================
+    Lado izquierdo
+==============================================================================*/
+
+.encabezado-izquierdo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+/*==============================================================================
+    Logo
+==============================================================================*/
+
+.encabezado-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+/*==============================================================================
+    Información
+==============================================================================*/
+
+.encabezado-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.encabezado-titulo {
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    color: var(--color-texto);
+
+}
+
+.encabezado-subtitulo {
+
+    font-size: .80rem;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Lado derecho
+==============================================================================*/
+
+.encabezado-derecho {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+}
+
+/*==============================================================================
+    Acciones
+==============================================================================*/
+
+.encabezado-acciones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .50rem;
+
+}
+
+/*==============================================================================
+    Usuario
+==============================================================================*/
+
+.encabezado-usuario {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    padding-left: 1rem;
+
+    border-left: 1px solid #e5e7eb;
+
+}
+
+.encabezado-avatar {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #e5e7eb;
+
+    font-weight: 700;
+
+}
+
+.encabezado-nombre {
+
+    font-size: .90rem;
+
+    font-weight: 600;
+
+}
+
+.encabezado-rol {
+
+    font-size: .75rem;
+
+    color: #6b7280;
+
+}
+
+/*==============================================================================
+    Responsive
+==============================================================================*/
+
+@media (max-width:768px){
+
+    .encabezado{
+
+        padding:0 1rem;
+
+    }
+
+    .encabezado-subtitulo{
+
+        display:none;
+
+    }
+
+    .encabezado-usuario{
+
+        padding-left:.50rem;
+
+    }
+
+    .encabezado-nombre,
+
+    .encabezado-rol{
+
+        display:none;
+
+    }
+
+}
