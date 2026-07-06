@@ -1,5 +1,4 @@
-
-
+/* src/styles/styles.scss */
 /* ==========================================================================
    Base
 ========================================================================== */
@@ -29,6 +28,7 @@
 @use "./layouts/layout-privado";
 @use "./layouts/menu-lateral";
 @use "./layouts/pie-pagina";
+@use "./layouts/barra-herramientas";
 
 /* ==========================================================================
    Temas
@@ -54,3 +54,9 @@
 @use "./utilidades/funciones";
 @use "./utilidades/helpers";
 @use "./utilidades/mixins";
+
+/* ==========================================================================
+   modo oscuro modo claro
+========================================================================== */
+@use "./temas/modo-claro";
+@use "./temas/modo-oscuro";

@@ -1,32 +1,9 @@
-/*
-    Estilos para ventanas modales.
-
-    Incluye:
-
-    - fondo oscuro
-    - animaciones
-    - tamaños
-*/
-
-/*
-===============================================================================
- MODALES GLOBALES
--------------------------------------------------------------------------------
- Componentes soportados
-
- - overlay
- - modal
- - encabezado
- - contenido
- - pie
- - tamaños
- - animaciones
-===============================================================================
-*/
+/* src/styles/componentes/_modales.scss */
 
 /*==============================================================================
     Overlay
 ==============================================================================*/
+@use "../temas/breakpoints" as bp;
 
 .modal-overlay {
 
@@ -40,7 +17,7 @@
 
     align-items: center;
 
-    padding: 1.5rem;
+    padding: var(--espaciado-lg);
 
     background: rgba(15, 23, 42, .55);
 
@@ -70,11 +47,10 @@
 
     background: var(--color-superficie);
 
-    border-radius: .75rem;
+    border-radius: var(--radio-md);
 
     overflow: hidden;
-
-    box-shadow: 0 20px 45px rgba(0,0,0,.18);
+    box-shadow: var(--sombra-modal);
 
     animation: aparecer-modal .25s ease;
 
@@ -83,7 +59,6 @@
 /*==============================================================================
     Tamaños
 ==============================================================================*/
-
 .modal-sm {
 
     max-width: 420px;
@@ -136,9 +111,9 @@
 
     gap: 1rem;
 
-    padding: 1rem 1.5rem;
+    padding: var(--espaciado-md) var(--espaciado-lg);
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--color-borde-secundario);
 
 }
 
@@ -190,7 +165,7 @@
 
     flex: 1;
 
-    padding: 1.5rem;
+    padding: var(--espaciado-lg);
 
     overflow-y: auto;
 
@@ -208,11 +183,11 @@
 
     align-items: center;
 
-    gap: .75rem;
+    gap: var(--espaciado-sm);
 
-    padding: 1rem 1.5rem;
+    padding: var(--espaciado-md) var(--espaciado-lg);
 
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid var(--color-borde-secundario);
 
 }
 
@@ -228,7 +203,7 @@
 
 .modal-contenido::-webkit-scrollbar-thumb {
 
-    background: #cbd5e1;
+    background: var(--gris-300);
 
     border-radius: 999px;
 
@@ -242,7 +217,7 @@
 
     pointer-events: none;
 
-    opacity: .70;
+    opacity: var(--opacidad-deshabilitado);
 
 }
 
@@ -290,7 +265,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .modal{
 

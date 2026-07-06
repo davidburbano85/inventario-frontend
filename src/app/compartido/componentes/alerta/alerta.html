@@ -1,0 +1,24 @@
+<!-- ==========================================================
+     Ubicación:
+     src/app/compartido/componentes/alerta/alerta.html
+=========================================================== -->
+
+@if (visible()) {
+
+<div class="alerta">
+
+    <strong>{{ titulo() }}</strong>
+
+    <p>{{ mensaje() }}</p>
+
+    <button
+        type="button"
+        (click)="ocultar()">
+
+        ×
+
+    </button>
+
+</div>
+
+}

@@ -1,10 +1,6 @@
-/*
-===============================================================================
- DISPLAY
--------------------------------------------------------------------------------
- Utilidades para controlar el tipo de visualización.
-===============================================================================
-*/
+/* src/styles/utilidades/_display.scss */
+
+@use "../temas/breakpoints" as bp;
 
 .d-none {
 
@@ -52,7 +48,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .d-none-mobile{
 
@@ -74,7 +70,7 @@
 
 }
 
-@media (min-width:769px){
+@include bp.portatil-y-mayor {
 
     .d-none-desktop{
 

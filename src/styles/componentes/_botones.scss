@@ -1,46 +1,4 @@
-/*
-    Estilos base para todos los botones del sistema.
-
-    Incluye:
-    - botón primario
-    - secundario
-    - éxito
-    - advertencia
-    - peligro
-    - icon button
-    - botón deshabilitado
-*/
-
-/*
-===============================================================================
- BOTONES GLOBALES
--------------------------------------------------------------------------------
- Contiene todos los estilos reutilizables para botones del sistema.
-
- Clases disponibles:
-
- .btn
- .btn-primario
- .btn-secundario
- .btn-exito
- .btn-advertencia
- .btn-peligro
- .btn-texto
- .btn-icono
-
- Tamaños
-
- .btn-sm
- .btn-md
- .btn-lg
-
- Estados
-
- :hover
- :active
- :disabled
-===============================================================================
-*/
+/* src/styles/componentes/_botones.scss */
 
 .btn {
 
@@ -170,7 +128,7 @@
 
 .btn-exito {
 
-    background: #16a34a;
+    background: var(--color-exito);
 
     color: white;
 
@@ -188,7 +146,7 @@
 
 .btn-advertencia {
 
-    background: #f59e0b;
+    background: var(--color-advertencia);
 
     color: white;
 
@@ -206,7 +164,7 @@
 
 .btn-peligro {
 
-    background: #dc2626;
+    background: var(--color-peligro);
 
     color: white;
 

@@ -1,27 +1,6 @@
-/*
-    Badges reutilizables.
+/*   src/styles/componentes/_badges.scss */
 
-    Ejemplo:
-
-    Activo
-    Inactivo
-    Pendiente
-*/
-/*
-===============================================================================
- BADGES GLOBALES
--------------------------------------------------------------------------------
- Componentes soportados
-
- - información
- - éxito
- - advertencia
- - error
- - neutro
- - outline
- - píldora
-===============================================================================
-*/
+@use "../temas/breakpoints" as bp;
 
 .badge {
 
@@ -83,9 +62,9 @@
 
 .badge-info {
 
-    background: #dbeafe;
+    background: var(--color-informacion-suave);
 
-    color: #1d4ed8;
+    color: var(--color-informacion-texto);
 
 }
 
@@ -95,9 +74,9 @@
 
 .badge-exito {
 
-    background: #dcfce7;
+    background: var(--color-exito-suave);
 
-    color: #15803d;
+    color: var(--color-exito-texto);
 
 }
 
@@ -107,9 +86,9 @@
 
 .badge-advertencia {
 
-    background: #fef3c7;
+    background: var(--color-advertencia-suave);
 
-    color: #b45309;
+    color: var(--color-advertencia-texto);
 
 }
 
@@ -119,9 +98,9 @@
 
 .badge-error {
 
-    background: #fee2e2;
+    background: var(--color-peligro-suave);
 
-    color: #b91c1c;
+    color: var(--color-peligro-texto);
 
 }
 
@@ -131,9 +110,9 @@
 
 .badge-neutro {
 
-    background: #f3f4f6;
+    background: var(--color-neutro-suave);
 
-    color: #374151;
+    color: var(--color-neutro-texto);
 
 }
 
@@ -195,7 +174,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .badge-lg{
 

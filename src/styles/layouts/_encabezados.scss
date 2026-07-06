@@ -1,222 +1,163 @@
-/*
-    Estilos globales
-    del encabezado.
-*/
-/*
-===============================================================================
- ENCABEZADO
--------------------------------------------------------------------------------
- Barra superior de la aplicación.
+/* src/styles/layouts/_encabezados.scss */
 
- Contiene:
-
- - Logo
- - Título
- - Buscador
- - Acciones
- - Usuario
-===============================================================================
-*/
+@use "../temas/breakpoints" as bp;
 
 .encabezado {
-
     display: flex;
-
-    justify-content: space-between;
-
     align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 
+    width: 100%;
+    height: 4rem;
+
+    padding-inline: 1.5rem;
+
+}
+
+.encabezado__informacion,
+.encabezado__acciones {
+    display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+.encabezado__titulo {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.encabezado__contexto,
+.encabezado__usuario {
+    position: relative;
+}
+
+.encabezado__selector,
+.encabezado__inicio {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    min-height: 2.5rem;
+
+    padding-inline: .85rem;
+
+    border: 1px solid transparent;
+    border-radius: var(--radio-md);
+
+
+    cursor: pointer;
+
+        
+}
+
+
+
+.encabezado__valor {
+    white-space: nowrap;
+}
+
+.encabezado__menu {
+    position: absolute;
+    top: calc(100% + .5rem);
+    left: 0;
+
+    min-width: 14rem;
+
+    margin: 0;
+    padding: .5rem 0;
+
+    list-style: none;
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+
+
+    z-index: 100;
+}
+
+.encabezado__menu li {
+    list-style: none;
+}
+
+.encabezado__opcion {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
 
     width: 100%;
 
-    height: var(--altura-header);
+    padding: .75rem 1rem;
 
-    padding: 0 var(--espaciado-lg);
+    border: none;
 
-    background: var(--color-superficie);
 
-    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 100;
+    cursor: pointer;
 
 }
 
-/*==============================================================================
-    Lado izquierdo
-==============================================================================*/
 
-.encabezado-izquierdo {
 
-    display: flex;
-
-    align-items: center;
-
-    gap: 1rem;
-
-}
-
-/*==============================================================================
-    Logo
-==============================================================================*/
-
-.encabezado-logo {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-shrink: 0;
-
-}
-
-/*==============================================================================
-    Información
-==============================================================================*/
-
-.encabezado-info {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-.encabezado-titulo {
-
-    font-size: 1.15rem;
-
-    font-weight: 700;
-
-    color: var(--color-texto);
-
-}
-
-.encabezado-subtitulo {
-
-    font-size: .80rem;
-
-    color: #6b7280;
-
-}
-
-/*==============================================================================
-    Lado derecho
-==============================================================================*/
-
-.encabezado-derecho {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: .75rem;
-
-}
-
-/*==============================================================================
-    Acciones
-==============================================================================*/
-
-.encabezado-acciones {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: .50rem;
-
-}
-
-/*==============================================================================
-    Usuario
-==============================================================================*/
-
-.encabezado-usuario {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: .75rem;
-
-    padding-left: 1rem;
-
-    border-left: 1px solid #e5e7eb;
-
-}
-
-.encabezado-avatar {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    width: 42px;
-
-    height: 42px;
-
-    border-radius: 50%;
-
-    background: #e5e7eb;
-
-    font-weight: 700;
-
-}
-
-.encabezado-nombre {
-
-    font-size: .90rem;
-
+.encabezado__opcion.activa {
     font-weight: 600;
+}
+
+@include bp.portatil-y-menor {
+
+    .encabezado {
+        flex-direction: column;
+        align-items: stretch;
+
+        height: auto;
+
+        padding-block: 1rem;
+    }
+
+    .encabezado__informacion,
+    .encabezado__acciones {
+        flex-wrap: wrap;
+    }
 
 }
 
-.encabezado-rol {
+@include bp.tablet-y-menor {
 
-    font-size: .75rem;
+    .encabezado__informacion,
+    .encabezado__acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-    color: #6b7280;
+    .encabezado__selector,
+    .encabezado__inicio {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .encabezado__menu {
+        position: static;
+
+        width: 100%;
+        margin-top: .5rem;
+    }
 
 }
 
-/*==============================================================================
-    Responsive
-==============================================================================*/
+@include bp.tablet-y-menor {
 
-@media (max-width:768px){
+    .encabezado {
 
-    .encabezado{
+        display: grid;
 
-        padding:0 1rem;
+        grid-template-columns: auto 1fr;
 
     }
+    .encabezado__menu-movil {
 
-    .encabezado-subtitulo{
-
-        display:none;
-
-    }
-
-    .encabezado-usuario{
-
-        padding-left:.50rem;
-
-    }
-
-    .encabezado-nombre,
-
-    .encabezado-rol{
-
-        display:none;
+        display: flex;
 
     }
 

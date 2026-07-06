@@ -1,28 +1,10 @@
-/*
-    Indicadores de carga.
-
-    Spinner
-    Barra de progreso
-    Skeleton
-*/
-/*
-===============================================================================
- SPINNERS Y ESTADOS DE CARGA
--------------------------------------------------------------------------------
- Componentes soportados
-
- - spinner
- - spinner pequeño
- - spinner grande
- - overlay
- - loader de página
- - skeleton
-===============================================================================
-*/
+/* src/styles/componentes/_spinner.scss */
 
 /*==============================================================================
     Spinner Base
 ==============================================================================*/
+
+@use "../temas/breakpoints" as bp;
 
 .spinner {
 
@@ -32,7 +14,7 @@
 
     height: 2.5rem;
 
-    border: .30rem solid #e5e7eb;
+    border: .30rem solid var(--color-borde-secundario);
 
     border-top-color: var(--color-primario);
 
@@ -152,7 +134,7 @@
 
     font-size: .90rem;
 
-    color: #6b7280;
+    color: var(--color-ayuda);
 
 }
 
@@ -166,9 +148,9 @@
 
     background: linear-gradient(
         90deg,
-        #f3f4f6 25%,
-        #e5e7eb 50%,
-        #f3f4f6 75%
+        var(--color-neutro-suave) 25%,
+        var(--color-borde-secundario) 50%,
+        var(--color-neutro-suave) 75%
     );
 
     background-size: 400% 100%;
@@ -267,7 +249,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .spinner-lg{
 

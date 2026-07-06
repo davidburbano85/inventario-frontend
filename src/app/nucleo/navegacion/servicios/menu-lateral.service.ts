@@ -1,3 +1,4 @@
+// src/app/nucleo/navegacion/servicios/menu-lateral.service
 import { Injectable, signal } from '@angular/core';
 
 import { MENU } from '../configuracion/menu.config';
@@ -11,6 +12,7 @@ export class MenuLateralService {
   readonly grupos = signal<GrupoMenu[]>(MENU.grupos);
   // Grupo de elementos del menú lateral, 
   // cada grupo puede contener varios elementos de menú.
+  readonly menuAbierto = signal(false);
 
   alternarGrupo(id: string): void {
     // Método para alternar la expansión de un grupo del menú lateral
@@ -28,6 +30,18 @@ export class MenuLateralService {
       }))
     );
 
+  }
+
+  abrirMenu(): void {
+    this.menuAbierto.set(true);
+  }
+
+  cerrarMenu(): void {
+    this.menuAbierto.set(false);
+  }
+
+  alternarMenu(): void {
+    this.menuAbierto.update(valor => !valor);
   }
 
 }

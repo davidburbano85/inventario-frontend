@@ -1,0 +1,130 @@
+/* src/styles/temas/_modo-claro.scss */
+
+
+:root {
+
+    /*==========================================================================
+        Aplicación
+    ==========================================================================*/
+
+    --color-fondo: var(--gris-100);
+
+    --color-superficie: #ffffff;
+
+    --color-superficie-secundaria: var(--gris-50);
+
+    /*==========================================================================
+        Texto
+    ==========================================================================*/
+
+    --color-texto: var(--gris-800);
+
+    --color-texto-secundario: var(--gris-600);
+
+    --color-texto-claro: var(--gris-500);
+
+    --color-texto-inverso: var(--gris-50);
+
+    /*==========================================================================
+        Bordes
+    ==========================================================================*/
+
+    --color-borde: var(--gris-200);
+
+    --color-borde-secundario: var(--gris-300);
+
+    /*==========================================================================
+        Menú lateral
+    ==========================================================================*/
+
+    --color-menu: var(--gris-900);
+
+    --color-menu-texto: var(--gris-100);
+
+    --color-menu-texto-secundario: var(--gris-400);
+
+    --color-menu-hover: var(--color-primario-800);
+
+    --color-menu-activo: var(--color-primario-600);
+
+    --color-menu-borde-activo: var(--color-primario-300);
+
+    --color-menu-scroll: var(--gris-400);
+
+    --menu-fondo: var(--color-menu);
+
+    --menu-texto: var(--color-menu-texto);
+
+    --menu-texto-secundario: var(--color-menu-texto-secundario);
+
+    --menu-hover: var(--color-menu-hover);
+
+    --menu-activo: var(--color-menu-activo);
+
+    --menu-borde-activo: var(--color-menu-borde-activo);
+
+    --menu-icono: var(--color-menu-texto-secundario);
+
+    --menu-borde: var(--gris-700);
+
+    --menu-scroll: var(--color-menu-scroll);
+
+    /*==========================================================================
+        Encabezado
+    ==========================================================================*/
+
+    --color-encabezado: var(--color-superficie);
+
+    --color-encabezado-hover: var(--gris-100);
+
+    /*==========================================================================
+        Tarjetas
+    ==========================================================================*/
+
+    --color-tarjeta: var(--color-superficie);
+
+    --color-tarjeta-hover: var(--gris-50);
+
+    /*==========================================================================
+        Botones
+    ==========================================================================*/
+
+    --color-boton-primario: var(--color-primario-600);
+
+    --color-boton-primario-hover: var(--color-primario-700);
+
+    --color-boton-secundario: var(--gris-200);
+
+    --color-boton-secundario-hover: var(--gris-300);
+
+    /*==========================================================================
+        Formularios
+    ==========================================================================*/
+
+    --color-input: var(--color-superficie);
+
+    --color-input-hover: var(--gris-50);
+
+    --color-input-borde: var(--gris-300);
+
+    --color-input-focus: var(--color-primario-500);
+
+    /*==========================================================================
+        Tablas
+    ==========================================================================*/
+
+    --color-tabla-encabezado: var(--gris-100);
+
+    --color-tabla-fila: var(--color-superficie);
+
+    --color-tabla-hover: var(--gris-50);
+
+    /*==========================================================================
+        Modales
+    ==========================================================================*/
+
+    --color-modal: var(--color-superficie);
+
+    --color-backdrop: rgba(17, 24, 39, .45);
+
+}

@@ -1,15 +1,5 @@
-/*
-    Paleta oficial del sistema.
 
-    Colores semánticos.
-*/
-/*
-===============================================================================
- PALETA DE COLORES
--------------------------------------------------------------------------------
- Colores semánticos utilizados por toda la aplicación.
-===============================================================================
-*/
+/* src/styles/temas/_colores.scss */
 
 :root {
 
@@ -27,6 +17,10 @@
     --color-primario-700: #1d4ed8;
     --color-primario-800: #1e40af;
     --color-primario-900: #1e3a8a;
+
+    --color-primario: var(--color-primario-900);
+
+    --color-secundario: var(--gris-800);
 
     /*==========================================================================
         Escala de grises
@@ -73,5 +67,57 @@
     --color-texto-claro: #9ca3af;
 
     --color-texto-inverso: #ffffff;
+
+    /*==========================================================================
+        Bordes y estados auxiliares
+    ==========================================================================*/
+
+    --color-borde: #d1d5db;
+
+    --color-borde-secundario: #e5e7eb;
+
+    --color-borde-suave: #f1f5f9;
+
+    --color-placeholder: #9ca3af;
+
+    --color-ayuda: #6b7280;
+
+    --color-error: #dc2626;
+
+    --color-deshabilitado: #f3f4f6;
+
+    --color-solo-lectura: #f9fafb;
+
+    /*==========================================================================
+        Superficies semánticas
+    ==========================================================================*/
+
+    --color-informacion-suave: var(--color-primario-50);
+
+    --color-informacion-borde: var(--color-primario-200);
+
+    --color-informacion-texto: var(--color-primario-700);
+
+    --color-exito-suave: #ecfdf5;
+
+    --color-exito-borde: #bbf7d0;
+
+    --color-exito-texto: #15803d;
+
+    --color-advertencia-suave: #fffbeb;
+
+    --color-advertencia-borde: #fde68a;
+
+    --color-advertencia-texto: #b45309;
+
+    --color-peligro-suave: #fef2f2;
+
+    --color-peligro-borde: #fecaca;
+
+    --color-peligro-texto: #b91c1c;
+
+    --color-neutro-suave: var(--gris-100);
+
+    --color-neutro-texto: var(--gris-700);
 
 }

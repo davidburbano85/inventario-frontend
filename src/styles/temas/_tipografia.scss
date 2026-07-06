@@ -1,17 +1,6 @@
-/*
-    Escala tipográfica.
+/* src/styles/temas/_tipografia.scss */
 
-    h1-h6
-    párrafos
-    etiquetas
-*/
-/*
-===============================================================================
- TIPOGRAFÍA
--------------------------------------------------------------------------------
- Escala tipográfica oficial del sistema.
-===============================================================================
-*/
+@use "../temas/breakpoints" as bp;
 
 :root {
 
@@ -235,7 +224,7 @@ small,
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     h1,
     .h1{

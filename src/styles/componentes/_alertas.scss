@@ -1,27 +1,5 @@
-/*
-    Alertas del sistema.
-
-    Tipos:
-
-    éxito
-    información
-    advertencia
-    error
-*/
-/*
-===============================================================================
- ALERTAS GLOBALES
--------------------------------------------------------------------------------
- Componentes soportados
-
- - información
- - éxito
- - advertencia
- - error
- - con icono
- - cerrable
-===============================================================================
-*/
+/*   src/styles/componentes/_alertas.scss */
+@use "../temas/breakpoints" as bp;
 
 .alerta {
 
@@ -44,6 +22,7 @@
 /*==============================================================================
     Icono
 ==============================================================================*/
+
 
 .alerta-icono {
 
@@ -129,11 +108,11 @@
 
 .alerta-info {
 
-    background: #eff6ff;
+    background: var(--color-informacion-suave);
 
-    color: #1d4ed8;
+    color: var(--color-informacion-texto);
 
-    border-color: #bfdbfe;
+    border-color: var(--color-informacion-borde);
 
 }
 
@@ -143,11 +122,11 @@
 
 .alerta-exito {
 
-    background: #ecfdf5;
+    background: var(--color-exito-suave);
 
-    color: #15803d;
+    color: var(--color-exito-texto);
 
-    border-color: #bbf7d0;
+    border-color: var(--color-exito-borde);
 
 }
 
@@ -157,11 +136,11 @@
 
 .alerta-advertencia {
 
-    background: #fffbeb;
+    background: var(--color-advertencia-suave);
 
-    color: #b45309;
+    color: var(--color-advertencia-texto);
 
-    border-color: #fde68a;
+    border-color: var(--color-advertencia-borde);
 
 }
 
@@ -171,11 +150,11 @@
 
 .alerta-error {
 
-    background: #fef2f2;
+    background: var(--color-peligro-suave);
 
-    color: #b91c1c;
+    color: var(--color-peligro-texto);
 
-    border-color: #fecaca;
+    border-color: var(--color-peligro-borde);
 
 }
 
@@ -203,7 +182,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .alerta{
 

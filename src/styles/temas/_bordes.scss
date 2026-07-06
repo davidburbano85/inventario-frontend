@@ -1,15 +1,5 @@
-/*
-    Bordes
-    radios
-    divisores.
-*/
-/*
-===============================================================================
- BORDES Y RADIOS
--------------------------------------------------------------------------------
- Centraliza los estilos relacionados con bordes del sistema.
-===============================================================================
-*/
+
+/* src/styles/temas/_bordes.scss */
 
 :root {
 
@@ -33,24 +23,24 @@
         Bordes
     ==========================================================================*/
 
-    --borde-fino: 1px solid #e5e7eb;
+    --borde-fino: 1px solid var(--color-borde-secundario);
 
-    --borde-medio: 2px solid #d1d5db;
+    --borde-medio: 2px solid var(--color-borde);
 
-    --borde-grueso: 3px solid #9ca3af;
+    --borde-grueso: 3px solid var(--gris-400);
 
     /*==========================================================================
         Colores
     ==========================================================================*/
 
-    --borde-primario: #2563eb;
+    --borde-primario: var(--color-primario);
 
-    --borde-secundario: #64748b;
+    --borde-secundario: var(--gris-500);
 
-    --borde-exito: #16a34a;
+    --borde-exito: var(--color-exito);
 
-    --borde-advertencia: #f59e0b;
+    --borde-advertencia: var(--color-advertencia);
 
-    --borde-peligro: #dc2626;
+    --borde-peligro: var(--color-peligro);
 
 }

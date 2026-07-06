@@ -1,3 +1,4 @@
+/* src/app/layouts/privado/menu-lateral/menu-lateral.ts */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -28,5 +29,18 @@ export class MenuLateral {
     this.servicioMenu.alternarGrupo(id);
   }// se invoca el método del servicio para alternar 
   //la visibilidad de un grupo de menú
+
+  protected seleccionarItem(): void {
+    this.servicioMenu.cerrarMenu();
+  }// se invoca el método del servicio para cerrar el menú lateral
+
+   protected alternarMenu(): void {
+
+    this.servicioMenu.alternarMenu();
+
+  }
+
+
+
 
 }

@@ -1,35 +1,173 @@
+<!-- src/app/layouts/privado/encabezado/encabezado.html -->
+
+
 <header class="encabezado">
 
-    <!-- Logo -->
-    <section class="logo">
 
-        <button
-            type="button"
-            class="boton-menu"
-            (click)="alternarMenu()">
+    <!-- Información principal -->
+    <section class="encabezado__informacion">
 
-            ☰
+        <button type="button" class="menu-grupo-boton" (click)="alternarMenu()">
+
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+
+        </button>
+        <h1 class="encabezado__titulo">
+            {{ nombreAplicacion() }}
+        </h1>
+
+        <!-- Empresa -->
+        <div class="encabezado__contexto">
+
+            <button type="button" class="menu-grupo-boton" (click)="alternarMenuEmpresa()">
+
+                <span class="encabezado__valor">
+                    {{ empresaSeleccionada().nombre }}
+                </span>
+
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                </span>
+
+            </button>
+
+            @if (menuEmpresaAbierto()) {
+
+            <ul class="encabezado__menu">
+
+                @for (empresa of empresas(); track empresa.id) {
+
+                <li>
+
+                    <button type="button" class="menu-grupo-boton" (click)="seleccionarEmpresa(empresa)">
+
+                        <span>
+                            {{ empresa.nombre }}
+                        </span>
+
+                    </button>
+
+                </li>
+
+                }
+
+            </ul>
+
+            }
+
+        </div>
+
+        <!-- Almacén -->
+        <div class="encabezado__contexto">
+
+            <button type="button" class="menu-grupo-boton" (click)="alternarMenuAlmacen()">
+
+                <span class="encabezado__valor">
+                    {{ almacenSeleccionado().nombre }}
+                </span>
+
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                </span>
+
+            </button>
+
+            @if (menuAlmacenAbierto()) {
+
+            <ul class="encabezado__menu">
+
+                @for (almacen of almacenes(); track almacen.id) {
+
+                <li>
+
+                    <button type="button" class="menu-grupo-boton" (click)="seleccionarAlmacen(almacen)">
+
+                        <span>
+                            {{ almacen.nombre }}
+                        </span>
+
+                    </button>
+
+                </li>
+
+                }
+
+            </ul>
+
+            }
+
+        </div>
+
+    </section>
+
+    <!-- Acciones -->
+    <section class="encabezado__acciones">
+
+        <button type="button" class="menu-grupo-boton" (click)="irInicio()">
+
+            <span class="material-symbols-outlined">
+                home
+            </span>
+
+            <span>
+                Inicio
+            </span>
 
         </button>
 
-        <h2 class="titulo">
+        <!-- Usuario -->
+        <div class="encabezado__usuario">
 
-            Inventario IA
+            <button type="button" class="menu-grupo-boton" (click)="alternarMenuUsuario()">
 
-        </h2>
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+
+                <span class="encabezado__valor">
+                    {{ usuarioActivo() }}
+                </span>
+
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                </span>
+
+            </button>
+
+            @if (menuUsuarioAbierto()) {
+
+            <ul class="encabezado__menu">
+
+                @for (opcion of opcionesUsuario(); track opcion.id) {
+
+                <li>
+
+                    <button type="button" class="menu-grupo-boton">
+
+                        <span class="material-symbols-outlined">
+                            {{ opcion.icono }}
+                        </span>
+
+                        <span>
+                            {{ opcion.titulo }}
+                        </span>
+
+                    </button>
+
+                </li>
+
+                }
+
+            </ul>
+
+            }
+
+        </div>
 
     </section>
 
-    <!-- Usuario -->
 
-    <section class="usuario">
-
-        <span class="nombre-usuario">
-
-            Administrador
-
-        </span>
-
-    </section>
 
 </header>

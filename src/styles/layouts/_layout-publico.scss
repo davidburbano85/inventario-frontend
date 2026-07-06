@@ -1,19 +1,7 @@
-/*
-    Layout para autenticación
-    y páginas públicas.
-*/
-/*
-===============================================================================
- LAYOUT PÚBLICO
--------------------------------------------------------------------------------
- Utilizado por:
+/* src/styles/layouts/_layout-publico.scss */
 
- - Login
- - Recuperar contraseña
- - Restablecer contraseña
- - Registro
-===============================================================================
-*/
+@use "../temas/breakpoints" as bp;
+
 
 .layout-publico {
 
@@ -53,7 +41,7 @@
 
     border-radius: 1rem;
 
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .10);
+    box-shadow: var(--sombra-layout-publico);
 
 }
 
@@ -76,7 +64,7 @@
     background: linear-gradient(
         135deg,
         var(--color-primario),
-        #1d4ed8
+        var(--color-primario-700)
     );
 
     color: white;
@@ -143,7 +131,7 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:992px){
+@include bp.portatil-y-menor {
 
     .layout-publico-contenedor{
 
@@ -159,7 +147,7 @@
 
 }
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .layout-publico{
 

@@ -1,0 +1,66 @@
+<section class="barra-herramientas">
+
+    <section class="barra-herramientas__informacion">
+
+        <h1 class="barra-herramientas__titulo">
+
+            {{ servicioBarraHerramientas.contexto().titulo }}
+
+        </h1>
+
+        @if (servicioBarraHerramientas.contexto().subtitulo) {
+
+            <p class="barra-herramientas__subtitulo">
+
+                {{ servicioBarraHerramientas.contexto().subtitulo }}
+
+            </p>
+
+        }
+
+    </section>
+
+    <section class="barra-herramientas__acciones">
+
+        @for (
+            accion of servicioBarraHerramientas.contexto().acciones;
+            track accion.id
+        ) {
+
+            @if (accion.visible ?? true) {
+
+                <button
+                    type="button"
+                    class="btn btn-md"
+                    [class.btn-primario]="accion.tipo === 'primario'"
+                    [class.btn-secundario]="accion.tipo === 'secundario'"
+                    [class.btn-exito]="accion.tipo === 'exito'"
+                    [class.btn-advertencia]="accion.tipo === 'advertencia'"
+                    [class.btn-peligro]="accion.tipo === 'peligro'"
+                    [disabled]="accion.deshabilitado || accion.cargando">
+
+                    @if (accion.icono) {
+
+                        <span class="material-symbols-outlined">
+
+                            {{ accion.icono }} 
+
+                        </span>
+
+                    }
+
+                    <span>
+
+                        {{ accion.titulo }}
+
+                    </span>
+
+                </button>
+
+            }
+
+        }
+
+    </section>
+
+</section>

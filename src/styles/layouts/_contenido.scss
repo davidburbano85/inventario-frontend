@@ -1,14 +1,6 @@
-/*
-    Área principal
-    donde Angular renderiza
-    las páginas.
-*/ /*
-===============================================================================
- CONTENIDO PRINCIPAL
--------------------------------------------------------------------------------
- Área donde Angular renderiza las páginas mediante el RouterOutlet.
-===============================================================================
-*/
+/* src/styles/layouts/_contenido.scss */
+
+@use "../temas/breakpoints" as bp;
 
 .contenido {
 
@@ -24,7 +16,7 @@
 
     min-height: 100%;
 
-    padding: var(--espaciado-lg);
+    padding: var(--padding-layout);
 
     background: var(--color-fondo);
 
@@ -66,7 +58,7 @@
 
     align-items: center;
 
-    gap: 1rem;
+    gap: var(--espaciado-md);
 
 }
 
@@ -94,7 +86,7 @@
 
     font-size: .95rem;
 
-    color: #6b7280;
+    color: var(--color-ayuda);
 
 }
 
@@ -108,7 +100,7 @@
 
     align-items: center;
 
-    gap: .75rem;
+    gap: var(--espaciado-sm);
 
 }
 
@@ -130,11 +122,11 @@
     Responsive
 ==============================================================================*/
 
-@media (max-width:768px){
+@include bp.tablet-y-menor {
 
     .contenido{
 
-        padding:1rem;
+        padding: var(--espaciado-md);
 
     }
 
