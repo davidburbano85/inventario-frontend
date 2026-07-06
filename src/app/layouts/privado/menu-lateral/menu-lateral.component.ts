@@ -11,8 +11,8 @@ import { MenuLateralService } from '../../../nucleo/navegacion/servicios/menu-la
     RouterLink,
     RouterLinkActive
   ],
-  templateUrl: './menu-lateral.html',
-  styleUrl: './menu-lateral.scss',
+  templateUrl: './menu-lateral.component.html',
+  styleUrl: './menu-lateral.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
   // change detection strategy is set to OnPush for
   //  performance optimization  en español: 

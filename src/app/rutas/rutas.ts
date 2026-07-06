@@ -9,7 +9,7 @@ export const RUTAS_APLICACION: Routes = [
   {
     path: 'inicio',
     loadComponent: () =>
-      import('../layouts/privado/layout-privado/layout-privado')
+      import('../layouts/privado/layout-privado/layout-privado.component')
         .then(c => c.LayoutPrivado)
   },
   {

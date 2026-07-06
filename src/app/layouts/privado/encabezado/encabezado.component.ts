@@ -23,8 +23,8 @@ interface OpcionUsuario {
   selector: 'app-encabezado',
   standalone: true,
   imports: [],
-  templateUrl: './encabezado.html',
-  styleUrl: './encabezado.scss',
+  templateUrl: './encabezado.component.html',
+  styleUrl: './encabezado.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Encabezado {

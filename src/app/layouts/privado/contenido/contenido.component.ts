@@ -7,8 +7,8 @@ import { BarraHerramientasService } from '../../../nucleo/barra-herramientas/ser
   selector: 'app-contenido',
   standalone: true,
   imports: [],
-  templateUrl: './contenido.html',
-  styleUrl: './contenido.scss',
+  templateUrl: './contenido.component.html',
+  styleUrl: './contenido.component.scss',
 })
 export class Contenido {
 

@@ -8,7 +8,7 @@ import { Component, output, signal } from '@angular/core';
 @Component({
   selector: 'app-modal',
   imports: [],
-  templateUrl: './modal.html',
+  templateUrl: './modal.component.html',
 })
 export class ModalComponent {
 

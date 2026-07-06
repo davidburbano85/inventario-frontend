@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
 @Component({
   selector: 'app-spinner',
   imports: [],
-  templateUrl: './spinner.html',
+  templateUrl: './spinner.component.html',
 })
 export class SpinnerComponent {
 

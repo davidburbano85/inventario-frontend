@@ -1,0 +1,32 @@
+<!-- ==========================================================
+     Ubicación:
+     src/app/compartido/componentes/paginacion/paginacion.component.html
+=========================================================== -->
+
+<nav>
+
+    <button
+        type="button"
+        (click)="anterior()"
+        [disabled]="!puedeRetroceder()">
+
+        Anterior
+
+    </button>
+
+    <span>
+
+        Página {{ paginaActual() }} de {{ totalPaginas() }}
+
+    </span>
+
+    <button
+        type="button"
+        (click)="siguiente()"
+        [disabled]="!puedeAvanzar()">
+
+        Siguiente
+
+    </button>
+
+</nav>

@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
 @Component({
   selector: 'app-alerta',
   imports: [],
-  templateUrl: './alerta.html',
+  templateUrl: './alerta.component.html',
 })
 export class AlertaComponent {
 

@@ -1,0 +1,100 @@
+<!-- ==========================================================
+     Ubicación:
+     src/app/compartido/componentes/formulario/formulario.component.html
+=========================================================== -->
+
+<form
+    [formGroup]="formulario"
+    (ngSubmit)="enviar()">
+
+    @for (campo of campos(); track campo.nombre) {
+
+        <div>
+
+            <label [for]="campo.nombre">
+
+                {{ campo.etiqueta }}
+
+            </label>
+
+            @switch (campo.tipo) {
+
+                @case ('text') {
+
+                    <input
+                        [id]="campo.nombre"
+                        type="text"
+                        [formControlName]="campo.nombre">
+
+                }
+
+                @case ('email') {
+
+                    <input
+                        [id]="campo.nombre"
+                        type="email"
+                        [formControlName]="campo.nombre">
+
+                }
+
+                @case ('password') {
+
+                    <input
+                        [id]="campo.nombre"
+                        type="password"
+                        [formControlName]="campo.nombre">
+
+                }
+
+                @case ('number') {
+
+                    <input
+                        [id]="campo.nombre"
+                        type="number"
+                        [formControlName]="campo.nombre">
+
+                }
+
+                @case ('date') {
+
+                    <input
+                        [id]="campo.nombre"
+                        type="date"
+                        [formControlName]="campo.nombre">
+
+                }
+
+                @case ('select') {
+
+                    <select
+                        [id]="campo.nombre"
+                        [formControlName]="campo.nombre">
+
+                        @for (opcion of campo.opciones ?? []; track opcion.valor) {
+
+                            <option
+                                [value]="opcion.valor">
+
+                                {{ opcion.texto }}
+
+                            </option>
+
+                        }
+
+                    </select>
+
+                }
+
+            }
+
+        </div>
+
+    }
+
+    <button type="submit">
+
+        Guardar
+
+    </button>
+
+</form>

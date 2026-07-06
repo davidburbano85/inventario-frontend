@@ -6,8 +6,8 @@ import { BarraHerramientasService } from '../../../nucleo/barra-herramientas/ser
   selector: 'app-barra-herramientas',
   standalone: true,
   imports: [],
-  templateUrl: './barra-herramientas.html',
-  styleUrl: './barra-herramientas.scss',
+  templateUrl: './barra-herramientas.component.html',
+  styleUrl: './barra-herramientas.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BarraHerramientas {

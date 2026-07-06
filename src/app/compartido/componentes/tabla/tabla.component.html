@@ -1,0 +1,48 @@
+<!-- ==========================================================
+     Ubicación:
+     src/app/compartido/componentes/tabla/tabla.component.html
+=========================================================== -->
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            @for (columna of columnas(); track columna) {
+
+                <th>
+
+                    {{ columna }}
+
+                </th>
+
+            }
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @for (fila of filas(); track $index) {
+
+            <tr>
+
+                @for (columna of columnas(); track columna) {
+
+                    <td>
+
+                        {{ fila[columna] }}
+
+                    </td>
+
+                }
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
