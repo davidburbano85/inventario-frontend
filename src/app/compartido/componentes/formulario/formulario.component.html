@@ -7,7 +7,7 @@
     [formGroup]="formulario"
     (ngSubmit)="enviar()">
 
-    @for (campo of campos(); track campo.nombre) {
+    @for (campo of formularioServicio.campos(); track campo.nombre) {
 
         <div>
 

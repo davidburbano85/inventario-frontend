@@ -3,41 +3,14 @@
 // src/app/compartido/componentes/formulario/formulario.component.ts
 // ==========================================================
 
-import { Component, effect, input, output } from '@angular/core';
+import { Component, effect, inject, output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
   ReactiveFormsModule
 } from '@angular/forms';
 
-export interface OpcionFormulario {
-
-  valor: unknown;
-
-  texto: string;
-
-}
-
-export interface CampoFormulario {
-
-  nombre: string;
-
-  etiqueta: string;
-
-  tipo: 'text'
-      | 'email'
-      | 'password'
-      | 'number'
-      | 'date'
-      | 'select';
-
-  valor: unknown;
-
-  requerido: boolean;
-
-  opciones?: OpcionFormulario[];
-
-}
+import { FormularioService } from '../../servicios/formulario/formulario.service';
 
 @Component({
   selector: 'app-formulario',
@@ -48,7 +21,7 @@ export interface CampoFormulario {
 })
 export class FormularioComponent {
 
-  readonly campos = input<CampoFormulario[]>([]);
+  protected readonly formularioServicio = inject(FormularioService);
 
   readonly guardar = output<Record<string, unknown>>();
 
@@ -56,21 +29,21 @@ export class FormularioComponent {
 
   readonly sincronizarFormulario = effect(() => {
 
-  this.formulario.reset();
+    this.formulario.reset();
 
-  for (const campo of this.campos()) {
+    for (const campo of this.formularioServicio.campos()) {
 
-    this.formulario.addControl(
+      this.formulario.addControl(
 
-      campo.nombre,
+        campo.nombre,
 
-      new FormControl(campo.valor)
+        new FormControl(campo.valor)
 
-    );
+      );
 
-  }
+    }
 
-});
+  });
 
   enviar(): void {
 
