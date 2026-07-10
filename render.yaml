@@ -1,7 +1,7 @@
 services:
   - type: static_site
     name: inventario-inteligente
-    buildCommand: npm install && npm run build
+    buildCommand: echo "========== RENDER.YAML LEIDO ==========" && echo "INICIANDO BUILD..." && exit 1
     publishDir: dist/inventarioIAFrontEnd/browser
     routes:
       - type: rewrite
