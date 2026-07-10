@@ -13,9 +13,7 @@ import { MenuLateralService } from '../../../nucleo/navegacion/servicios/menu-la
   ],
   templateUrl: './menu-lateral.component.html',
   styleUrl: './menu-lateral.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
-  // change detection strategy is set to OnPush for
-  //  performance optimization  en español: 
+  changeDetection: ChangeDetectionStrategy.OnPush 
   // la estrategia de detección de cambios se establece 
   // en OnPush para optimización del rendimiento
 })

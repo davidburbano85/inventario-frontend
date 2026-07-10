@@ -1,12 +1,10 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/paginacion/paginacion.component.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/paginacion/paginacion.component.html -->
 
-<nav>
+<nav class="paginacion">
 
     <button
         type="button"
+        class="boton boton-secundario"
         (click)="anterior()"
         [disabled]="!puedeRetroceder()">
 
@@ -14,7 +12,7 @@
 
     </button>
 
-    <span>
+    <span class="paginacion-informacion">
 
         Página {{ paginaActual() }} de {{ totalPaginas() }}
 
@@ -22,6 +20,7 @@
 
     <button
         type="button"
+        class="boton boton-primario"
         (click)="siguiente()"
         [disabled]="!puedeAvanzar()">
 

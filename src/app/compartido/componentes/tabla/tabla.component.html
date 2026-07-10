@@ -1,48 +1,49 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/tabla/tabla.component.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/tabla/tabla.component.html -->
 
-<table>
+<div class="tabla-contenedor">
 
-    <thead>
+    <table class="tabla">
 
-        <tr>
-
-            @for (columna of columnas(); track columna) {
-
-                <th>
-
-                    {{ columna }}
-
-                </th>
-
-            }
-
-        </tr>
-
-    </thead>
-
-    <tbody>
-
-        @for (fila of filas(); track $index) {
+        <thead class="tabla-encabezado">
 
             <tr>
 
                 @for (columna of columnas(); track columna) {
 
-                    <td>
+                    <th class="tabla-columna">
 
-                        {{ fila[columna] }}
+                        {{ columna }}
 
-                    </td>
+                    </th>
 
                 }
 
             </tr>
 
-        }
+        </thead>
 
-    </tbody>
+        <tbody class="tabla-cuerpo">
 
-</table>
+            @for (fila of filas(); track $index) {
+
+                <tr class="tabla-fila">
+
+                    @for (columna of columnas(); track columna) {
+
+                        <td class="tabla-celda">
+
+                            {{ fila[columna] }}
+
+                        </td>
+
+                    }
+
+                </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

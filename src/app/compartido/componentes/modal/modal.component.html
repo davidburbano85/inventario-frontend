@@ -1,7 +1,4 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/modal/modal.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/modal/modal.component.html -->
 
 @if (visible()) {
 
@@ -11,13 +8,21 @@
 
         <header class="modal-encabezado">
 
-            <h2>{{ titulo() }}</h2>
+            <h2 class="modal-titulo">
+
+                {{ titulo() }}
+
+            </h2>
 
         </header>
 
         <section class="modal-contenido">
 
-            <p>{{ mensaje() }}</p>
+            <p class="modal-texto">
+
+                {{ mensaje() }}
+
+            </p>
 
         </section>
 
@@ -25,6 +30,7 @@
 
             <button
                 type="button"
+                class="boton boton-secundario"
                 (click)="cancelarModal()">
 
                 Cancelar
@@ -33,6 +39,7 @@
 
             <button
                 type="button"
+                class="boton boton-primario"
                 (click)="confirmar()">
 
                 Aceptar

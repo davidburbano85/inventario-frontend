@@ -1,17 +1,17 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/formulario/formulario.component.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/formulario/formulario.component.html -->
 
 <form
+    class="formulario"
     [formGroup]="formulario"
     (ngSubmit)="enviar()">
 
     @for (campo of formularioServicio.campos(); track campo.nombre) {
 
-        <div>
+        <div class="formulario-campo">
 
-            <label [for]="campo.nombre">
+            <label
+                class="formulario-etiqueta"
+                [for]="campo.nombre">
 
                 {{ campo.etiqueta }}
 
@@ -22,6 +22,7 @@
                 @case ('text') {
 
                     <input
+                        class="formulario-control"
                         [id]="campo.nombre"
                         type="text"
                         [formControlName]="campo.nombre">
@@ -31,6 +32,7 @@
                 @case ('email') {
 
                     <input
+                        class="formulario-control"
                         [id]="campo.nombre"
                         type="email"
                         [formControlName]="campo.nombre">
@@ -40,6 +42,7 @@
                 @case ('password') {
 
                     <input
+                        class="formulario-control"
                         [id]="campo.nombre"
                         type="password"
                         [formControlName]="campo.nombre">
@@ -49,6 +52,7 @@
                 @case ('number') {
 
                     <input
+                        class="formulario-control"
                         [id]="campo.nombre"
                         type="number"
                         [formControlName]="campo.nombre">
@@ -58,6 +62,7 @@
                 @case ('date') {
 
                     <input
+                        class="formulario-control"
                         [id]="campo.nombre"
                         type="date"
                         [formControlName]="campo.nombre">
@@ -67,13 +72,13 @@
                 @case ('select') {
 
                     <select
+                        class="formulario-control"
                         [id]="campo.nombre"
                         [formControlName]="campo.nombre">
 
                         @for (opcion of campo.opciones ?? []; track opcion.valor) {
 
-                            <option
-                                [value]="opcion.valor">
+                            <option [value]="opcion.valor">
 
                                 {{ opcion.texto }}
 
@@ -91,10 +96,16 @@
 
     }
 
-    <button type="submit">
+    <div class="formulario-acciones">
 
-        Guardar
+        <button
+            type="submit"
+            class="boton boton-primario">
 
-    </button>
+            Guardar
+
+        </button>
+
+    </div>
 
 </form>

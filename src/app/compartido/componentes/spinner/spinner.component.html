@@ -1,15 +1,22 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/spinner/spinner.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/spinner/spinner.component.html -->
 
 @if (visible()) {
 
 <div class="spinner-fondo">
 
-    <div class="spinner">
+    <div
+        class="spinner"
+        role="status"
+        aria-live="polite"
+        aria-label="Cargando">
 
-        Cargando...
+        <div class="spinner-circulo"></div>
+
+        <span class="spinner-texto">
+
+            Cargando...
+
+        </span>
 
     </div>
 

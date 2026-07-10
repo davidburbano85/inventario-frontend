@@ -1,18 +1,33 @@
-<!-- ==========================================================
-     Ubicación:
-     src/app/compartido/componentes/alerta/alerta.html
-=========================================================== -->
+<!-- src/app/compartido/componentes/alerta/alerta.component.html -->
 
 @if (visible()) {
 
-<div class="alerta">
+<div
+    class="alerta"
+    [class.alerta-exito]="tipo() === 'exito'"
+    [class.alerta-error]="tipo() === 'error'"
+    [class.alerta-advertencia]="tipo() === 'advertencia'"
+    [class.alerta-info]="tipo() === 'informacion'">
 
-    <strong>{{ titulo() }}</strong>
+    <div class="alerta-contenido">
 
-    <p>{{ mensaje() }}</p>
+        <strong class="alerta-titulo">
+
+            {{ titulo() }}
+
+        </strong>
+
+        <p class="alerta-texto">
+
+            {{ mensaje() }}
+
+        </p>
+
+    </div>
 
     <button
         type="button"
+        class="alerta-cerrar"
         (click)="ocultar()">
 
         ×
