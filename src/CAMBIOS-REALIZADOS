@@ -1,0 +1,20 @@
+// se actualiza  app.config.ts creando el provideclientrttpClient
+
+// se crear api.service.ts
+//  y los metodos genericos obtenercrear actualizar y eliminar
+
+// se crean los modelos (interfaces) para el login logininterface y loginresponse
+//  ademas se crea el servicio autenticacion.services
+//  se  crea el interceptor para el jwt y no repetir codigo de autorizacion
+//  y se actualizo el app.config.ts
+//  import {
+//   provideHttpClient,
+//   withInterceptors
+// } from '@angular/common/http';
+
+// import { jwtInterceptor } from './nucleo/autenticacion/interceptores/jwt.interceptor';
+// y se actualizo el provideHttpClient() para agregar el interceptor jwtInterceptor
+// provideHttpClient(
+//   withInterceptors([
+//     jwtInterceptor
+//   ]))
