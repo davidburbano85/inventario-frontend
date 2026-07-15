@@ -1,19 +1,21 @@
-<!-- src/app/layouts/privado/encabezado/encabezado.html -->
-
+<!-- src/app/layouts/privado/encabezado/encabezado.component.html -->
 
 <header class="encabezado">
-
 
     <!-- Información principal -->
     <section class="encabezado__informacion">
 
-        <button type="button" class="menu-grupo-boton" (click)="alternarMenu()">
+        <button
+            type="button"
+            class="menu-grupo-boton"
+            (click)="alternarMenu()">
 
             <span class="material-symbols-outlined">
                 menu
             </span>
 
         </button>
+
         <h1 class="encabezado__titulo">
             {{ nombreAplicacion() }}
         </h1>
@@ -21,7 +23,10 @@
         <!-- Empresa -->
         <div class="encabezado__contexto">
 
-            <button type="button" class="menu-grupo-boton" (click)="alternarMenuEmpresa()">
+            <button
+                type="button"
+                class="menu-grupo-boton"
+                (click)="alternarMenuEmpresa()">
 
                 <span class="encabezado__valor">
                     {{ empresaSeleccionada().nombre }}
@@ -35,25 +40,28 @@
 
             @if (menuEmpresaAbierto()) {
 
-            <ul class="encabezado__menu">
+                <ul class="encabezado__menu">
 
-                @for (empresa of empresas(); track empresa.id) {
+                    @for (empresa of empresas(); track empresa.id) {
 
-                <li>
+                        <li>
 
-                    <button type="button" class="menu-grupo-boton" (click)="seleccionarEmpresa(empresa)">
+                            <button
+                                type="button"
+                                class="menu-grupo-boton"
+                                (click)="seleccionarEmpresa(empresa)">
 
-                        <span>
-                            {{ empresa.nombre }}
-                        </span>
+                                <span>
+                                    {{ empresa.nombre }}
+                                </span>
 
-                    </button>
+                            </button>
 
-                </li>
+                        </li>
 
-                }
+                    }
 
-            </ul>
+                </ul>
 
             }
 
@@ -62,7 +70,10 @@
         <!-- Almacén -->
         <div class="encabezado__contexto">
 
-            <button type="button" class="menu-grupo-boton" (click)="alternarMenuAlmacen()">
+            <button
+                type="button"
+                class="menu-grupo-boton"
+                (click)="alternarMenuAlmacen()">
 
                 <span class="encabezado__valor">
                     {{ almacenSeleccionado().nombre }}
@@ -76,25 +87,28 @@
 
             @if (menuAlmacenAbierto()) {
 
-            <ul class="encabezado__menu">
+                <ul class="encabezado__menu">
 
-                @for (almacen of almacenes(); track almacen.id) {
+                    @for (almacen of almacenes(); track almacen.id) {
 
-                <li>
+                        <li>
 
-                    <button type="button" class="menu-grupo-boton" (click)="seleccionarAlmacen(almacen)">
+                            <button
+                                type="button"
+                                class="menu-grupo-boton"
+                                (click)="seleccionarAlmacen(almacen)">
 
-                        <span>
-                            {{ almacen.nombre }}
-                        </span>
+                                <span>
+                                    {{ almacen.nombre }}
+                                </span>
 
-                    </button>
+                            </button>
 
-                </li>
+                        </li>
 
-                }
+                    }
 
-            </ul>
+                </ul>
 
             }
 
@@ -105,7 +119,10 @@
     <!-- Acciones -->
     <section class="encabezado__acciones">
 
-        <button type="button" class="menu-grupo-boton" (click)="irInicio()">
+        <button
+            type="button"
+            class="menu-grupo-boton"
+            (click)="irInicio()">
 
             <span class="material-symbols-outlined">
                 home
@@ -120,14 +137,17 @@
         <!-- Usuario -->
         <div class="encabezado__usuario">
 
-            <button type="button" class="menu-grupo-boton" (click)="alternarMenuUsuario()">
+            <button
+                type="button"
+                class="menu-grupo-boton"
+                (click)="alternarMenuUsuario()">
 
                 <span class="material-symbols-outlined">
                     account_circle
                 </span>
 
                 <span class="encabezado__valor">
-                    {{ usuarioActivo() }}
+                    {{ usuarioSesion()?.nombre ?? 'Usuario' }}
                 </span>
 
                 <span class="material-symbols-outlined">
@@ -138,36 +158,37 @@
 
             @if (menuUsuarioAbierto()) {
 
-            <ul class="encabezado__menu">
+                <ul class="encabezado__menu">
 
-                @for (opcion of opcionesUsuario(); track opcion.id) {
+                    @for (opcion of opcionesUsuario(); track opcion.id) {
 
-                <li>
+                        <li>
 
-                    <button type="button" class="menu-grupo-boton">
+                            <button
+                                type="button"
+                                class="menu-grupo-boton"
+                                (click)="ejecutarOpcion(opcion)">
 
-                        <span class="material-symbols-outlined">
-                            {{ opcion.icono }}
-                        </span>
+                                <span class="material-symbols-outlined">
+                                    {{ opcion.icono }}
+                                </span>
 
-                        <span>
-                            {{ opcion.titulo }}
-                        </span>
+                                <span>
+                                    {{ opcion.titulo }}
+                                </span>
 
-                    </button>
+                            </button>
 
-                </li>
+                        </li>
 
-                }
+                    }
 
-            </ul>
+                </ul>
 
             }
 
         </div>
 
     </section>
-
-
 
 </header>

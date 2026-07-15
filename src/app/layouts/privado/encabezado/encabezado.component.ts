@@ -1,6 +1,15 @@
-// src/app/layouts/privado/encabezado/encabezado.ts
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import {MenuLateralService} from '../../../nucleo/navegacion/servicios/menu-lateral.service';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  signal
+} from '@angular/core';
+
+import { Router } from '@angular/router';
+
+import { MenuLateralService } from '../../../nucleo/navegacion/servicios/menu-lateral.service';
+import { AutenticacionService } from '../../../nucleo/servicios/autenticacion/autenticacion.service';
 
 interface Empresa {
   id: number;
@@ -17,6 +26,7 @@ interface OpcionUsuario {
   id: number;
   titulo: string;
   icono: string;
+   accion?: 'perfil' | 'configuracion' | 'cerrarSesion';
 }
 
 @Component({
@@ -27,16 +37,26 @@ interface OpcionUsuario {
   styleUrl: './encabezado.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Encabezado {
+export class EncabezadoComponent {
+
+  private readonly router = inject(Router);
+
+  private readonly autenticacionService = inject(AutenticacionService);
+
+  protected readonly servicioMenu = inject(MenuLateralService);
 
   protected readonly nombreAplicacion = signal('Inventario IA');
 
-  protected readonly usuarioActivo = signal('David Burbano');
+  /**
+   * Usuario autenticado.
+   */
+  protected readonly usuarioSesion =
+    this.autenticacionService.usuarioSesion;
 
   protected readonly empresas = signal<Empresa[]>([
     {
       id: 1,
-      nombre: 'Burbano Builders Enterprise ',
+      nombre: 'Burbano Builders Enterprise',
       almacenes: [
         { id: 1, nombre: 'Compumundo Hyper Mega Red' },
         { id: 2, nombre: 'Bodega Norte' },
@@ -53,7 +73,9 @@ export class Encabezado {
     }
   ]);
 
-  protected readonly empresaSeleccionada = signal<Empresa>(this.empresas()[0]);
+  protected readonly empresaSeleccionada = signal<Empresa>(
+    this.empresas()[0]
+  );
 
   protected readonly almacenSeleccionado = signal<Almacen>(
     this.empresas()[0].almacenes[0]
@@ -69,23 +91,51 @@ export class Encabezado {
 
   protected readonly menuUsuarioAbierto = signal(false);
 
-  protected readonly opcionesUsuario = signal<OpcionUsuario[]>([
-    {
-      id: 1,
-      titulo: 'Mi perfil',
-      icono: 'person'
-    },
-    {
-      id: 2,
-      titulo: 'Configuración',
-      icono: 'settings'
-    },
-    {
-      id: 3,
-      titulo: 'Cerrar sesión',
-      icono: 'logout'
-    }
-  ]);
+protected readonly opcionesUsuario = signal<OpcionUsuario[]>([
+  {
+    id: 1,
+    titulo: 'Mi perfil',
+    icono: 'person',
+    accion: 'perfil'
+  },
+  {
+    id: 2,
+    titulo: 'Configuración',
+    icono: 'settings',
+    accion: 'configuracion'
+  },
+  {
+    id: 3,
+    titulo: 'Cerrar sesión',
+    icono: 'logout',
+    accion: 'cerrarSesion'
+  }
+]);
+
+protected ejecutarOpcion(
+  opcion: OpcionUsuario
+): void {
+
+  switch (opcion.accion) {
+
+    case 'perfil':
+      // TODO: navegar al perfil.
+      break;
+
+    case 'configuracion':
+      // TODO: navegar a configuración.
+      break;
+
+    case 'cerrarSesion':
+      this.cerrarSesion();
+      break;
+
+    default:
+      break;
+
+  }
+
+}
 
   protected alternarMenuEmpresa(): void {
 
@@ -117,17 +167,23 @@ export class Encabezado {
 
   }
 
-  protected seleccionarEmpresa(empresa: Empresa): void {
+  protected seleccionarEmpresa(
+    empresa: Empresa
+  ): void {
 
     this.empresaSeleccionada.set(empresa);
 
-    this.almacenSeleccionado.set(empresa.almacenes[0]);
+    this.almacenSeleccionado.set(
+      empresa.almacenes[0]
+    );
 
     this.menuEmpresaAbierto.set(false);
 
   }
 
-  protected seleccionarAlmacen(almacen: Almacen): void {
+  protected seleccionarAlmacen(
+    almacen: Almacen
+  ): void {
 
     this.almacenSeleccionado.set(almacen);
 
@@ -137,15 +193,24 @@ export class Encabezado {
 
   protected irInicio(): void {
 
-    // Pendiente de integrar con Router.
+    this.router.navigate(['/inicio']);
 
   }
 
-  protected readonly servicioMenu = inject(MenuLateralService);
-  
   protected alternarMenu(): void {
 
     this.servicioMenu.alternarMenu();
+
+  }
+
+  /**
+   * Cierra la sesión del usuario.
+   */
+  protected cerrarSesion(): void {
+
+    this.autenticacionService.cerrarSesion();
+
+    this.router.navigate(['/login']);
 
   }
 

@@ -1,10 +1,12 @@
 // src/app/nucleo/autenticacion/modelos/login-response.interface.ts
-export interface LoginResponse {
+import { UsuarioSesion } from '../../autenticacion/modelos/usuario-sesion-interface';
 
-  userId: string;
+export interface LoginResponse {
 
   accessToken: string;
 
   refreshToken: string;
+
+  usuario: UsuarioSesion;
 
 }

@@ -1,0 +1,114 @@
+ <!-- src/app/features/autenticacion/paginas/login/login.component.html -->
+<!-- src/app/features/autenticacion/paginas/login/login.component.html -->
+
+<section class="contenedor">
+
+    <article class="tarjeta tarjeta--autenticacion">
+
+        <header class="tarjeta__encabezado">
+
+            <h1 class="tarjeta__titulo">
+                Iniciar sesión
+            </h1>
+
+            <p class="tarjeta__descripcion">
+                Ingresa tus credenciales para acceder al sistema.
+            </p>
+
+        </header>
+
+        <section class="tarjeta__contenido">
+
+            <form
+                autocomplete="off"
+                (ngSubmit)="iniciarSesion()">
+
+                <!-- Correo -->
+
+                <div class="campo-formulario">
+
+                    <label
+                        class="campo-formulario__etiqueta"
+                        for="correo">
+
+                        Correo electrónico
+
+                    </label>
+
+                    <input
+                        id="correo"
+                        name="correo"
+                        type="email"
+                        class="campo-formulario__control"
+                        placeholder="correo@empresa.com"
+                        [value]="email()"
+                        (input)="email.set(($any($event.target)).value)">
+
+                </div>
+
+                <!-- Contraseña -->
+
+                <div class="campo-formulario">
+
+                    <label
+                        class="campo-formulario__etiqueta"
+                        for="password">
+
+                        Contraseña
+
+                    </label>
+
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        class="campo-formulario__control"
+                        placeholder="********"
+                        [value]="password()"
+                        (input)="password.set(($any($event.target)).value)"
+                        (keyup.enter)="iniciarSesion()">
+
+                </div>
+
+                <!-- Botón -->
+
+                <div class="campo-formulario">
+
+                    <button
+                        type="submit"
+                        class="boton boton--primario boton--ancho-completo"
+                        [disabled]="cargando()">
+
+                        @if (cargando()) {
+
+                            <span class="material-symbols-outlined">
+                                progress_activity
+                            </span>
+
+                            <span>
+                                Iniciando sesión...
+                            </span>
+
+                        } @else {
+
+                            <span class="material-symbols-outlined">
+                                login
+                            </span>
+
+                            <span>
+                                Iniciar sesión
+                            </span>
+
+                        }
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </article>
+
+</section>

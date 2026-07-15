@@ -1,13 +1,14 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ENTORNO } from '../../configuracion/entorno';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ApiService {
     private readonly http = inject(HttpClient);
-    private readonly baseUrl = 'https://inventario-backend-z2a4.onrender.com';
+    private readonly baseUrl = ENTORNO.api.urlBase;
     // se crea una variable para la url base de la api
 
     obtener<T>(ruta: string): Observable<T> {

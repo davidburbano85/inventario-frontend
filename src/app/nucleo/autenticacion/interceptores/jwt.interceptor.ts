@@ -1,3 +1,4 @@
+//src/app/nucleo/autenticacion/interceptores/jwt.interceptor.ts
 import {inject} from '@angular/core';
 import{HttpInterceptorFn} from '@angular/common/http';
 import{AutenticacionService} from '../../servicios/autenticacion/autenticacion.service';

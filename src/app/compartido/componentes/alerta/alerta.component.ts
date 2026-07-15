@@ -6,6 +6,7 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-alerta',
+  standalone: true,
   imports: [],
   templateUrl: './alerta.component.html',
 })

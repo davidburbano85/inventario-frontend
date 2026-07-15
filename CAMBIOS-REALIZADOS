@@ -1,0 +1,48 @@
+// se actualiza  app.config.ts creando el provideclientrttpClient
+
+// se crear api.service.ts
+//  y los metodos genericos obtenercrear actualizar y eliminar
+
+// se crean los modelos (interfaces) para el login logininterface y loginresponse
+//  ademas se crea el servicio autenticacion.services
+//  se  crea el interceptor para el jwt y no repetir codigo de autorizacion
+//  y se actualizo el app.config.ts
+//  import {
+//   provideHttpClient,
+//   withInterceptors
+// } from '@angular/common/http';
+
+// import { jwtInterceptor } from './nucleo/autenticacion/interceptores/jwt.interceptor';
+// y se actualizo el provideHttpClient() para agregar el interceptor jwtInterceptor
+// provideHttpClient(
+//   withInterceptors([
+//     jwtInterceptor
+//   ]))
+
+//================ 14/07/26 ============================
+
+// se centraliza la URL de la API en el archivo entorno.ts para que 
+// toda la aplicacion pueda acceder a ella y no tener que repetirla 
+// en cada servicio que haga peticiones HTTP
+
+// actualizamos  el api.service.ts para que use la URL de la API desde el archivo entorno.ts
+// importamos el ENTORNO desde el archivo entorno.ts y usamos ENTORNO.api.urlBase en lugar
+//  de la URL hardcodeada y cambiamos la variable baseUrl para
+//   que sea privada y de solo lectura, y se inicializa con ENTORNO.api.urlBase
+
+
+// se actualiza el formulario.component.ts para que el texto del boton sea un input 
+// y se pueda personalizar desde el componente padre, ademas se agrega el decorador 
+// @Component({standalone: true}) para que el componente sea independiente y no dependa 
+// de un modulo, y se agrega el import de ReactiveFormsModule en el array imports del decorador @Component
+// y en el archivo formulario.component.html se cambia el texto del boton de "Guardar" a 
+// {{ textoBoton() }} para que sea dinamico y se pueda personalizar desde el componente padre
+
+
+// ============================== 15-07-26 ================================
+
+se crea login.component para iniciar seseion
+se actualiza src/app/rutas/rutas.ts con el login 
+se crea la interfaz //src/app/nucleo/autenticacion/modelos/usuario-sesion-interface.ts
+
+

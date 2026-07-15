@@ -4,16 +4,14 @@
 // ==========================================================
 
 import { Component, effect, inject, output } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule
-} from '@angular/forms';
+import {  FormControl,  FormGroup,  ReactiveFormsModule} from '@angular/forms';
 
 import { FormularioService } from '../../servicios/formulario/formulario.service';
+import{input} from "@angular/core";
 
 @Component({
   selector: 'app-formulario',
+  standalone: true,
   imports: [
     ReactiveFormsModule
   ],
@@ -26,6 +24,7 @@ export class FormularioComponent {
   readonly guardar = output<Record<string, unknown>>();
 
   readonly formulario = new FormGroup({});
+  readonly textoBoton = input<string>('Guardar');
 
   readonly sincronizarFormulario = effect(() => {
 
