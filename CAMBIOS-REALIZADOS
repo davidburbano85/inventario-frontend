@@ -44,5 +44,7 @@
 se crea login.component para iniciar seseion
 se actualiza src/app/rutas/rutas.ts con el login 
 se crea la interfaz //src/app/nucleo/autenticacion/modelos/usuario-sesion-interface.ts
+se actualizar el autenticacion.service, el api.service el contenido.ts contenido.html 
+se actualiza el encabezado, 
 
 

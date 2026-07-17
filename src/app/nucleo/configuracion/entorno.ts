@@ -4,7 +4,7 @@ export const ENTORNO = {
 
   api: {
 
-    urlBase: 'https://inventario-backend-z2a4.onrender.com'
+    urlBase: 'https://inventario-backend-z2a4.onrender.com/api'
 
   }
 

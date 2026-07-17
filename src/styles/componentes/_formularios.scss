@@ -270,3 +270,56 @@
     background: var(--color-solo-lectura);
 
 }
+
+/*==============================================================================
+    Acciones del formulario
+
+    Los estilos visuales del botón provienen de:
+    src/styles/componentes/_botones.scss
+==============================================================================*/
+
+.formulario-acciones {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: .5rem;
+
+}
+
+.formulario-acciones .btn {
+
+    min-width: 10rem;
+
+}
+
+.formulario-acciones .btn-bloque {
+
+    min-width: 100%;
+
+}
+
+@include bp.tablet-y-menor {
+
+    .formulario-acciones {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .formulario-acciones .btn {
+
+        width: 100%;
+
+        min-width: auto;
+
+    }
+
+}

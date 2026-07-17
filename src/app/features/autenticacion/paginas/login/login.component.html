@@ -1,114 +1,106 @@
- <!-- src/app/features/autenticacion/paginas/login/login.component.html -->
-<!-- src/app/features/autenticacion/paginas/login/login.component.html -->
+<!-- ==========================================================
+     Ubicación:
+     src/app/features/autenticacion/paginas/login/login.component.html
 
-<section class="contenedor">
+     Se utilizan únicamente las clases globales del proyecto.
+     No se agregan estilos inline ni clases inventadas.
+=========================================================== -->
 
-    <article class="tarjeta tarjeta--autenticacion">
+<div class="layout-publico">
 
-        <header class="tarjeta__encabezado">
+    <div class="layout-publico-contenedor contenedor">
 
-            <h1 class="tarjeta__titulo">
-                Iniciar sesión
-            </h1>
+        <!-- Panel informativo -->
+        <section class="layout-publico-panel">
 
-            <p class="tarjeta__descripcion">
-                Ingresa tus credenciales para acceder al sistema.
-            </p>
+            <div class="layout-publico-logo">
 
-        </header>
+                <!-- Reemplazar por el logo oficial -->
+                <h1>Inventario</h1>
 
-        <section class="tarjeta__contenido">
+            </div>
 
-            <form
-                autocomplete="off"
-                (ngSubmit)="iniciarSesion()">
+            <div class="layout-publico-contenido">
 
-                <!-- Correo -->
+                <span class="badge badge-primario">
 
-                <div class="campo-formulario">
+                    Sistema de Inventario
 
-                    <label
-                        class="campo-formulario__etiqueta"
-                        for="correo">
+                </span>
 
-                        Correo electrónico
+                <h2 class="layout-publico-titulo">
 
-                    </label>
+                    Bienvenido
 
-                    <input
-                        id="correo"
-                        name="correo"
-                        type="email"
-                        class="campo-formulario__control"
-                        placeholder="correo@empresa.com"
-                        [value]="email()"
-                        (input)="email.set(($any($event.target)).value)">
+                </h2>
 
-                </div>
+                <p class="layout-publico-texto">
 
-                <!-- Contraseña -->
+                    Inicie sesión para acceder al sistema de inventario y
+                    administrar la información de forma segura.
 
-                <div class="campo-formulario">
+                </p>
 
-                    <label
-                        class="campo-formulario__etiqueta"
-                        for="password">
-
-                        Contraseña
-
-                    </label>
-
-                    <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        class="campo-formulario__control"
-                        placeholder="********"
-                        [value]="password()"
-                        (input)="password.set(($any($event.target)).value)"
-                        (keyup.enter)="iniciarSesion()">
-
-                </div>
-
-                <!-- Botón -->
-
-                <div class="campo-formulario">
-
-                    <button
-                        type="submit"
-                        class="boton boton--primario boton--ancho-completo"
-                        [disabled]="cargando()">
-
-                        @if (cargando()) {
-
-                            <span class="material-symbols-outlined">
-                                progress_activity
-                            </span>
-
-                            <span>
-                                Iniciando sesión...
-                            </span>
-
-                        } @else {
-
-                            <span class="material-symbols-outlined">
-                                login
-                            </span>
-
-                            <span>
-                                Iniciar sesión
-                            </span>
-
-                        }
-
-                    </button>
-
-                </div>
-
-            </form>
+            </div>
 
         </section>
 
-    </article>
 
-</section>
+
+        <!-- Panel formulario -->
+        <section class="layout-publico-formulario">
+
+            <div class="layout-publico-caja">
+
+                <div class="tarjeta tarjeta-elevada">
+
+                    <div class="tarjeta-encabezado">
+
+                        <div>
+
+                            <h2 class="tarjeta-titulo">
+
+                                Iniciar sesión
+
+                            </h2>
+
+                            <p class="tarjeta-subtitulo">
+
+                                Ingrese sus credenciales para continuar.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tarjeta-contenido">
+
+                        <!-- Mensajes -->
+                        <app-alerta />
+
+                        <!--
+                            El formulario obtiene toda su configuración
+                            desde FormularioService.
+                        -->
+                        <app-formulario
+                            textoBoton="Ingresar"
+                            claseBoton="btn btn-primario btn-bloque"
+                            (guardar)="iniciarSesion($event)">
+                        </app-formulario>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Spinner global -->
+    <app-spinner />
+
+</div>

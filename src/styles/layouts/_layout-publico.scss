@@ -64,7 +64,7 @@
     background: linear-gradient(
         135deg,
         var(--color-primario),
-        var(--color-primario-700)
+        var(--color-primario-500)
     );
 
     color: white;
@@ -136,12 +136,45 @@
     .layout-publico-contenedor{
 
         grid-template-columns:1fr;
+        gap:var(--espacio-8);
 
     }
 
     .layout-publico-panel{
 
-        display:none;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:var(--espacio-8);
+
+    }
+
+    .layout-publico-logo{
+
+        margin-bottom:var(--espacio-6);
+
+    }
+
+    .layout-publico-contenido{
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:var(--espacio-4);
+
+    }
+
+    .layout-publico-texto{
+
+        max-width:40rem;
+
+    }
+
+    .layout-publico-formulario{
+
+        width:100%;
 
     }
 

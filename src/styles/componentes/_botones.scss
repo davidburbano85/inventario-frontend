@@ -38,15 +38,41 @@
     Estados
 ==============================================================================*/
 
-.btn:hover {
+@media (hover: hover) {
 
-    transform: translateY(-1px);
+    .btn:hover {
+
+        transform: translateY(-1px);
+
+    }
+
+    .btn-primario:hover,
+    .btn-secundario:hover,
+    .btn-exito:hover,
+    .btn-advertencia:hover,
+    .btn-peligro:hover {
+
+        filter: brightness(.92);
+
+    }
+
+    .btn-texto:hover {
+
+        background: rgba(37, 99, 235, .08);
+
+    }
 
 }
 
-.btn:active {
+@media (hover: none) {
 
-    transform: scale(.98);
+    .btn:active {
+
+        transform: scale(.98);
+
+        filter: brightness(.92);
+
+    }
 
 }
 
@@ -57,6 +83,8 @@
     cursor: not-allowed;
 
     transform: none;
+
+    filter: none;
 
 }
 

@@ -1,3 +1,4 @@
+//src/app/layouts/privado/barra-herramientas/barra-herramientas.component.tss
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 import { BarraHerramientasService } from '../../../nucleo/barra-herramientas/servicios/barra-herramientas.service';
