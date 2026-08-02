@@ -8,7 +8,17 @@
 
 .spinner {
 
-    display: inline-block;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.spinner-circulo {
 
     width: 2.5rem;
 

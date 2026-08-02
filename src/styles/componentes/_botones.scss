@@ -22,7 +22,7 @@
 
     white-space: nowrap;
 
-    font-size: .95rem;
+    font-size: 1.1rem;
 
     font-weight: 600;
 
@@ -38,41 +38,15 @@
     Estados
 ==============================================================================*/
 
-@media (hover: hover) {
+.btn:hover {
 
-    .btn:hover {
-
-        transform: translateY(-1px);
-
-    }
-
-    .btn-primario:hover,
-    .btn-secundario:hover,
-    .btn-exito:hover,
-    .btn-advertencia:hover,
-    .btn-peligro:hover {
-
-        filter: brightness(.92);
-
-    }
-
-    .btn-texto:hover {
-
-        background: rgba(37, 99, 235, .08);
-
-    }
+    transform: translateY(-1px);
 
 }
 
-@media (hover: none) {
+.btn:active {
 
-    .btn:active {
-
-        transform: scale(.98);
-
-        filter: brightness(.92);
-
-    }
+    transform: scale(.98);
 
 }
 
@@ -83,8 +57,6 @@
     cursor: not-allowed;
 
     transform: none;
-
-    filter: none;
 
 }
 
@@ -120,15 +92,15 @@
 
 .btn-primario {
 
-    background: var(--color-primario);
+    background:linear-gradient(300deg, var(--color-boton-primario), var(--color-primario-400));
 
-    color: white;
+    color: var(--color-boton-primario-texto);
 
 }
 
 .btn-primario:hover {
 
-    filter: brightness(.92);
+    background:linear-gradient(135deg, var(--color-boton-primario-hover), var(--color-primario-300));
 
 }
 
@@ -138,15 +110,15 @@
 
 .btn-secundario {
 
-    background: var(--color-secundario);
+    background:linear-gradient(135deg, var(--color-boton-secundario), var(--color-primario-900));
 
-    color: white;
+    color: var(--color-boton-secundario-texto);
 
 }
 
 .btn-secundario:hover {
 
-    filter: brightness(.92);
+    background:linear-gradient(350deg, var(--color-boton-secundario), var(--color-primario) );
 
 }
 
@@ -156,15 +128,15 @@
 
 .btn-exito {
 
-    background: var(--color-exito);
+    background: var(--color-boton-exito);
 
-    color: white;
+    color: var(--color-boton-exito-texto);
 
 }
 
 .btn-exito:hover {
 
-    filter: brightness(.92);
+    background: var(--color-boton-exito-hover);
 
 }
 
@@ -174,15 +146,15 @@
 
 .btn-advertencia {
 
-    background: var(--color-advertencia);
+    background: var(--color-boton-advertencia);
 
-    color: white;
+    color: var(--color-boton-advertencia-texto);
 
 }
 
 .btn-advertencia:hover {
 
-    filter: brightness(.92);
+    background: var(--color-boton-advertencia-hover);
 
 }
 
@@ -192,15 +164,15 @@
 
 .btn-peligro {
 
-    background: var(--color-peligro);
+    background:linear-gradient(350deg, var(--color-boton-peligro), var(--gris-600));
 
-    color: white;
+    color: var(--color-boton-peligro-texto);
 
 }
 
 .btn-peligro:hover {
 
-    filter: brightness(.92);
+    background:linear-gradient(150deg, var(--color-boton-peligro), var(--gris-600));
 
 }
 
@@ -212,13 +184,13 @@
 
     background: transparent;
 
-    color: var(--color-primario);
+    color: var(--color-boton-texto);
 
 }
 
 .btn-texto:hover {
 
-    background: rgba(37, 99, 235, .08);
+    background: var(--color-boton-texto-hover);
 
 }
 
@@ -252,8 +224,6 @@
 
 /*==============================================================================
     Spinner interno
-
-    Se utilizará cuando un botón esté ejecutando una acción.
 ==============================================================================*/
 
 .btn-cargando {

@@ -1,16 +1,10 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  inject,
-  signal
-} from '@angular/core';
+import {  ChangeDetectionStrategy,  Component,  computed,  inject,  signal} from '@angular/core';
 
 import { Router } from '@angular/router';
 
 import { MenuLateralService } from '../../../nucleo/navegacion/servicios/menu-lateral.service';
 import { AutenticacionService } from '../../../nucleo/servicios/autenticacion/autenticacion.service';
-
+import{ TemaService } from '../../../nucleo/servicios/temas/tema.service';
 interface Empresa {
   id: number;
   nombre: string;
@@ -43,6 +37,8 @@ export class EncabezadoComponent {
 
   private readonly autenticacionService = inject(AutenticacionService);
 
+  private readonly temaService = inject(TemaService);
+
   protected readonly servicioMenu = inject(MenuLateralService);
 
   protected readonly nombreAplicacion = signal('Inventario IA');
@@ -52,6 +48,17 @@ export class EncabezadoComponent {
    */
   protected readonly usuarioSesion =
     this.autenticacionService.usuarioSesion;
+
+
+    /**
+ * Tema actual de la aplicación.
+ */
+protected readonly tema = this.temaService.tema;
+
+/**
+ * Indica si el tema actual es oscuro.
+ */
+protected readonly esOscuro = this.temaService.esOscuro;
 
   protected readonly empresas = signal<Empresa[]>([
     {
@@ -202,6 +209,16 @@ protected ejecutarOpcion(
     this.servicioMenu.alternarMenu();
 
   }
+
+
+  /**
+ * Cambia entre modo claro y modo oscuro.
+ */
+protected cambiarTema(): void {
+
+  this.temaService.cambiarTema();
+
+}
 
   /**
    * Cierra la sesión del usuario.

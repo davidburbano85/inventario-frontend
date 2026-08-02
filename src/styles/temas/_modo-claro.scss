@@ -1,130 +1,86 @@
 /* src/styles/temas/_modo-claro.scss */
 
+:root,
+[data-tema="claro"] {
 
-:root {
+    --color-fondo: var(--gris-200);
+    --color-superficie: var(--gris-100);// este es el color de fondo de los componentes, como tarjetas, modales, etc.
+    --color-superficie-secundaria: var(--gris-300);
+    --color-superficie-hover: var(--gris-200);
 
-    /*==========================================================================
-        Aplicación
-    ==========================================================================*/
-
-    --color-fondo: var(--gris-100);
-
-    --color-superficie: #ffffff;
-
-    --color-superficie-secundaria: var(--gris-50);
-
-    /*==========================================================================
-        Texto
-    ==========================================================================*/
-
-    --color-texto: var(--gris-800);
-
+    --color-texto: var(--gris-900);
     --color-texto-secundario: var(--gris-600);
-
     --color-texto-claro: var(--gris-500);
+    --color-texto-inverso: var(--blanco);
+    --color-placeholder: var(--gris-400);
 
-    --color-texto-inverso: var(--gris-50);
+    --color-borde: var(--gris-400);
+    --color-borde-secundario: var(--gris-200);
+    --borde-fino: 1px solid var(--color-borde);
 
-    /*==========================================================================
-        Bordes
-    ==========================================================================*/
-
-    --color-borde: var(--gris-200);
-
-    --color-borde-secundario: var(--gris-300);
-
-    /*==========================================================================
-        Menú lateral
-    ==========================================================================*/
-
-    --color-menu: var(--gris-900);
-
-    --color-menu-texto: var(--gris-100);
-
-    --color-menu-texto-secundario: var(--gris-400);
-
-    --color-menu-hover: var(--color-primario-800);
-
-    --color-menu-activo: var(--color-primario-600);
-
-    --color-menu-borde-activo: var(--color-primario-300);
-
+    --color-menu: var(--gris-250);
+    --color-menu-texto: var(--gris-900);
+    --color-menu-texto-secundario: var(--gris-600);
+    --color-menu-hover: var(--color-primario-50);
+    --color-menu-activo: var(--color-primario-100);
+    --color-menu-borde-activo: var(--color-primario);
     --color-menu-scroll: var(--gris-400);
 
     --menu-fondo: var(--color-menu);
-
     --menu-texto: var(--color-menu-texto);
-
     --menu-texto-secundario: var(--color-menu-texto-secundario);
-
     --menu-hover: var(--color-menu-hover);
-
     --menu-activo: var(--color-menu-activo);
-
     --menu-borde-activo: var(--color-menu-borde-activo);
-
     --menu-icono: var(--color-menu-texto-secundario);
-
-    --menu-borde: var(--gris-700);
-
+    --menu-borde: var(--color-borde);
     --menu-scroll: var(--color-menu-scroll);
 
-    /*==========================================================================
-        Encabezado
-    ==========================================================================*/
-
-    --color-encabezado: var(--color-superficie);
-
+    --color-encabezado: var(--gris-900);
     --color-encabezado-hover: var(--gris-100);
 
-    /*==========================================================================
-        Tarjetas
-    ==========================================================================*/
-
-    --color-tarjeta: var(--color-superficie);
-
-    --color-tarjeta-hover: var(--gris-50);
+    --color-tarjeta: var(--gris-900);
+    --color-tarjeta-hover: var(--gris-300);
 
     /*==========================================================================
-        Botones
-    ==========================================================================*/
+    Botones
+==========================================================================*/
 
-    --color-boton-primario: var(--color-primario-600);
+--color-boton-primario: var(--color-primario);
+--color-boton-primario-hover: var(--color-primario-700);
+--color-boton-primario-texto: var(--blanco);
 
-    --color-boton-primario-hover: var(--color-primario-700);
+--color-boton-secundario: var(--color-secundario);
+--color-boton-secundario-hover: var(--color-secundario-700);
+--color-boton-secundario-texto: var(--blanco);
 
-    --color-boton-secundario: var(--gris-200);
+--color-boton-exito: var(--color-exito);
+--color-boton-exito-hover: var(--color-exito-700);
+--color-boton-exito-texto: var(--blanco);
 
-    --color-boton-secundario-hover: var(--gris-300);
+--color-boton-advertencia: var(--color-advertencia);
+--color-boton-advertencia-hover: var(--color-advertencia-700);
+--color-boton-advertencia-texto: var(--blanco);
 
-    /*==========================================================================
-        Formularios
-    ==========================================================================*/
+--color-boton-peligro: var(--color-peligro);
+--color-boton-peligro-hover: var(--color-peligro-700);
+--color-boton-peligro-texto: var(--blanco);
 
-    --color-input: var(--color-superficie);
+--color-boton-texto: var(--color-primario);
+--color-boton-texto-hover: rgba(37, 99, 235, .08);
 
+    --color-input: var(--blanco);
     --color-input-hover: var(--gris-50);
-
     --color-input-borde: var(--gris-300);
-
-    --color-input-focus: var(--color-primario-500);
-
-    /*==========================================================================
-        Tablas
-    ==========================================================================*/
+    --color-input-focus: var(--color-primario);
 
     --color-tabla-encabezado: var(--gris-100);
-
-    --color-tabla-fila: var(--color-superficie);
-
+    --color-tabla-fila: var(--blanco);
     --color-tabla-hover: var(--gris-50);
 
-    /*==========================================================================
-        Modales
-    ==========================================================================*/
+    --color-modal: var(--blanco);
+    --color-backdrop: rgba(15, 23, 42, .45);
 
-    --color-modal: var(--color-superficie);
-
-    --color-backdrop: rgba(17, 24, 39, .45);
+    
 
 }

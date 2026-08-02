@@ -7,6 +7,9 @@ $movil: 576px;
 $tablet: 768px;
 $portatil: 992px;
 $escritorio: 1200px;
+$full-hd: 1600px;
+$qhd: 2560px;
+$uhd: 3840px;
 
 /*==============================================================================
     Mixins Responsive
@@ -31,7 +34,25 @@ $escritorio: 1200px;
 }
 
 @mixin escritorio {
-    @media (min-width: ($escritorio)) {
+    @media (min-width: $escritorio) {
+        @content;
+    }
+}
+
+@mixin full-hd {
+    @media (min-width: $full-hd) {
+        @content;
+    }
+}
+
+@mixin qhd {
+    @media (min-width: $qhd) {
+        @content;
+    }
+}
+
+@mixin uhd {
+    @media (min-width: $uhd) {
         @content;
     }
 }
@@ -60,3 +81,44 @@ $escritorio: 1200px;
     }
 }
 
+@mixin escritorio-y-mayor {
+    @media (min-width: $escritorio) {
+        @content;
+    }
+}
+
+@mixin full-hd-y-mayor {
+    @media (min-width: $full-hd) {
+        @content;
+    }
+}
+
+@mixin qhd-y-mayor {
+    @media (min-width: $qhd) {
+        @content;
+    }
+}
+
+@mixin uhd-y-mayor {
+    @media (min-width: $uhd) {
+        @content;
+    }
+}
+
+@mixin entre-escritorio-fullhd {
+    @media (min-width: $escritorio) and (max-width: ($full-hd - 1)) {
+        @content;
+    }
+}
+
+@mixin entre-fullhd-qhd {
+    @media (min-width: $full-hd) and (max-width: ($qhd - 1)) {
+        @content;
+    }
+}
+
+@mixin entre-qhd-uhd {
+    @media (min-width: $qhd) and (max-width: ($uhd - 1)) {
+        @content;
+    }
+}

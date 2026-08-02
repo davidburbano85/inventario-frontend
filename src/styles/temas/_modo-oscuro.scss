@@ -1,297 +1,83 @@
 /* src/styles/temas/_modo-oscuro.scss */
 
-:root {
+[data-tema="oscuro"] {
 
-    /*==========================================================================
-        Aplicación
-    ==========================================================================*/
+    --color-fondo: var(--gris-950);
+    --color-superficie: var(--gris-900);
+    --color-superficie-secundaria: var(--gris-800);
+    --color-superficie-hover: var(--gris-700);
 
-    background: var(--gris-900);
+    --color-texto: var(--gris-100);
+    --color-texto-secundario: var(--gris-300);
+    --color-texto-claro: var(--gris-400);
+    --color-texto-inverso: var(--blanco);
+    --color-placeholder: var(--gris-500);
 
-    color: var(--gris-50);
+    --color-borde: var(--gris-700);
+    --color-borde-secundario: var(--gris-600);
+    --borde-fino: 1px solid var(--color-borde);
 
-    --color-menu: var(--gris-900);
-
+    --color-menu: var(--gris-950);
     --color-menu-texto: var(--gris-100);
-
-    --color-menu-texto-secundario: var(--gris-300);
-
-    --color-menu-hover: var(--color-primario-800);
-
-    --color-menu-activo: var(--color-primario-700);
-
+    --color-menu-texto-secundario: var(--gris-400);
+    --color-menu-hover: var(--color-primario-900);
+    --color-menu-activo: var(--color-primario-800);
     --color-menu-borde-activo: var(--color-primario-300);
-
     --color-menu-scroll: var(--gris-600);
 
     --menu-fondo: var(--color-menu);
-
     --menu-texto: var(--color-menu-texto);
-
     --menu-texto-secundario: var(--color-menu-texto-secundario);
-
     --menu-hover: var(--color-menu-hover);
-
     --menu-activo: var(--color-menu-activo);
-
     --menu-borde-activo: var(--color-menu-borde-activo);
-
     --menu-icono: var(--color-menu-texto-secundario);
-
-    --menu-borde: var(--gris-700);
-
+    --menu-borde: var(--color-borde);
     --menu-scroll: var(--color-menu-scroll);
 
-    /*==========================================================================
-        Layout principal
-    ==========================================================================*/
+    --color-encabezado: var(--gris-900);
+    --color-encabezado-hover: var(--gris-800);
 
-    .layout-privado,
-    .layout-publico,
-    .barra-herramientas {
-
-        background: var(--gris-900);
-
-        color: var(--gris-50);
-
-    }
+    --color-tarjeta: var(--gris-900);
+    --color-tarjeta-hover: var(--gris-800);
 
     /*==========================================================================
-        Encabezado
-    ==========================================================================*/
-
-    .encabezado {
-
-        background: var(--gris-800);
-
-        color: var(--gris-50);
-
-        border-bottom: 1px solid var(--gris-700);
-
-    }
-
-    /*==========================================================================
-        Menú lateral
-    ==========================================================================*/
-
-    .menu-lateral {
-
-        background: var(--gris-900);
-
-        color: var(--gris-50);
-
-        border-right: 1px solid var(--gris-700);
-
-    }
-
-
-
-    .menu-grupo-boton {
-
-        color: var(--gris-100);
-
-    }
-
-    .menu-grupo-boton:hover {
-
-        background: var(--color-primario-900);
-
-    }
-
-    .menu-grupo-titulo {
-
-        color: var(--gris-100);
-
-    }
-
-    .menu-grupo-flecha {
-
-        color: var(--gris-400);
-
-    }
-
-    .submenu {
-
-        background: transparent;
-
-    }
-
-    .menu-item {
-
-        color: var(--gris-300);
-
-    }
-
-    .menu-item:hover {
-
-        background: var(--color-primario-800);
-
-        color: var(--gris-50);
-
-    }
-
-    .menu-item.activo {
-
-        background: var(--color-primario-700);
-
-        color: var(--gris-50);
-
-        border-left: 3px solid var(--color-primario-300);
-
-    }
-
-    .menu-item-icono {
-
-        color: var(--gris-400);
-
-    }
-
-    .menu-item:hover .menu-item-icono,
-    .menu-item.activo .menu-item-icono {
-
-        color: var(--gris-50);
-
-    }
-
-    /*==========================================================================
-        Contenido
-    ==========================================================================*/
-
-    .contenido {
-
-        background: var(--gris-900);
-
-        color: var(--gris-50);
-
-    }
-
-    /*==========================================================================
-        Tarjetas
-    ==========================================================================*/
-
-    .tarjeta {
-
-        background: var(--gris-800);
-
-        color: var(--gris-100);
-
-        border: 1px solid var(--gris-700);
-
-    }
-
-    /*==========================================================================
-        Formularios
-    ==========================================================================*/
-
-    input,
-    select,
-    textarea {
-
-        background: var(--gris-800);
-
-        color: var(--gris-100);
-
-        border: 1px solid var(--gris-600);
-
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-
-        color: var(--gris-500);
-
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-
-        border-color: var(--color-primario-500);
-
-        outline: none;
-
-    }
-
-    /*==========================================================================
-        Botones
-    ==========================================================================*/
-
-    button {
-
-        color: var(--gris-50);
-
-    }
-
-    /*==========================================================================
-        Enlaces
-    ==========================================================================*/
-
-    a {
-
-        color: var(--gris-200);
-
-    }
-
-    a:hover {
-
-        color: var(--color-primario-300);
-
-    }
-
-    /*==========================================================================
-        Tablas
-    ==========================================================================*/
-
-    table {
-
-        background: var(--gris-800);
-
-        color: var(--gris-100);
-
-    }
-
-    thead {
-
-        background: var(--gris-700);
-
-    }
-
-    tbody tr:hover {
-
-        background: var(--gris-700);
-
-    }
-
-    /*==========================================================================
-        Scroll
-    ==========================================================================*/
-
-    ::-webkit-scrollbar {
-
-        width: 8px;
-
-        height: 8px;
-
-    }
-
-    ::-webkit-scrollbar-track {
-
-        background: var(--gris-900);
-
-    }
-
-    ::-webkit-scrollbar-thumb {
-
-        background: var(--gris-600);
-
-        border-radius: 999px;
-
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-
-        background: var(--gris-500);
-
-    }
+    Botones
+==========================================================================*/
+
+--color-boton-primario: var(--color-primario-500);
+--color-boton-primario-hover: var(--color-primario-400);
+--color-boton-primario-texto: var(--blanco);
+
+--color-boton-secundario: var(--gris-700);
+--color-boton-secundario-hover: var(--gris-600);
+--color-boton-secundario-texto: var(--blanco);
+
+--color-boton-exito: var(--color-exito);
+--color-boton-exito-hover: var(--color-exito-400);
+--color-boton-exito-texto: var(--blanco);
+
+--color-boton-advertencia: var(--color-advertencia);
+--color-boton-advertencia-hover: var(--color-advertencia-400);
+--color-boton-advertencia-texto: var(--blanco);
+
+--color-boton-peligro: var(--color-peligro);
+--color-boton-peligro-hover: var(--color-peligro-400);
+--color-boton-peligro-texto: var(--blanco);
+
+--color-boton-texto: var(--color-primario-300);
+--color-boton-texto-hover: rgba(96, 165, 250, .12);
+
+    --color-input: var(--gris-900);
+    --color-input-hover: var(--gris-800);
+    --color-input-borde: var(--gris-700);
+    --color-input-focus: var(--color-primario-400);
+
+    --color-tabla-encabezado: var(--gris-800);
+    --color-tabla-fila: var(--gris-900);
+    --color-tabla-hover: var(--gris-800);
+
+    --color-modal: var(--gris-900);
+    --color-backdrop: rgba(0, 0, 0, .65);
 
 }

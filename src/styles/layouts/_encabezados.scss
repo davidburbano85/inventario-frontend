@@ -19,7 +19,11 @@
 .encabezado__acciones {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
+}
+
+.encabezado__acciones {
+    margin-right: 1rem;
 }
 
 .encabezado__titulo {
@@ -69,6 +73,10 @@
     padding: .5rem 0;
 
     list-style: none;
+
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    box-shadow: var(--sombra-lg);
 
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-md);
@@ -158,6 +166,174 @@
     .encabezado__menu-movil {
 
         display: flex;
+
+    }
+
+}
+
+/*==============================================================================
+    Full HD
+==============================================================================*/
+
+@include bp.full-hd {
+
+    .encabezado {
+
+        height: 5rem;
+
+        gap: 2rem;
+
+        padding-inline: 2.5rem;
+
+    }
+
+    .encabezado__informacion,
+    .encabezado__acciones {
+
+        gap: 1.5rem;
+
+    }
+
+    .encabezado__titulo {
+
+        font-size: 1.5rem;
+
+    }
+
+    .encabezado__selector,
+    .encabezado__inicio {
+
+        min-height: 3rem;
+
+        padding-inline: 1.25rem;
+
+        font-size: 1rem;
+
+    }
+
+    .encabezado__menu {
+
+        min-width: 18rem;
+
+    }
+
+    .encabezado__opcion {
+
+        padding: 1rem 1.25rem;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+/*==============================================================================
+    2K
+==============================================================================*/
+
+@include bp.qhd {
+
+    .encabezado {
+
+        height: 5.75rem;
+
+        gap: 2.5rem;
+
+        padding-inline: 3rem;
+
+    }
+
+    .encabezado__informacion,
+    .encabezado__acciones {
+
+        gap: 2rem;
+
+    }
+
+    .encabezado__titulo {
+
+        font-size: 1.75rem;
+
+    }
+
+    .encabezado__selector,
+    .encabezado__inicio {
+
+        min-height: 3.5rem;
+
+        padding-inline: 1.5rem;
+
+        font-size: 1.1rem;
+
+    }
+
+    .encabezado__menu {
+
+        min-width: 20rem;
+
+    }
+
+    .encabezado__opcion {
+
+        padding: 1.1rem 1.5rem;
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+/*==============================================================================
+    4K
+==============================================================================*/
+
+@include bp.uhd {
+
+    .encabezado {
+
+        height: 6.5rem;
+
+        gap: 3rem;
+
+        padding-inline: 4rem;
+
+    }
+
+    .encabezado__informacion,
+    .encabezado__acciones {
+
+        gap: 2.5rem;
+
+    }
+
+    .encabezado__titulo {
+
+        font-size: 2rem;
+
+    }
+
+    .encabezado__selector,
+    .encabezado__inicio {
+
+        min-height: 4rem;
+
+        padding-inline: 2rem;
+
+        font-size: 1.25rem;
+
+    }
+
+    .encabezado__menu {
+
+        min-width: 24rem;
+
+    }
+
+    .encabezado__opcion {
+
+        padding: 1.25rem 1.75rem;
+
+        font-size: 1.25rem;
 
     }
 

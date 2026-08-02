@@ -18,7 +18,8 @@
     Grupo
 ==============================================================================*/
 
-.campo {
+.campo,
+.formulario-campo {
 
     display: flex;
     flex-direction: column;
@@ -46,7 +47,15 @@
 .campo textarea,
 .campo select {
 
+    display: block;
+
     width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
 
     padding: .80rem 1rem;
 

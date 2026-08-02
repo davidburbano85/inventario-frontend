@@ -64,10 +64,10 @@
     background: linear-gradient(
         135deg,
         var(--color-primario),
-        var(--color-primario-500)
+        var(--color-primario-400)
     );
 
-    color: white;
+    color: var(--color-texto-inverso);
 
     text-align: center;
 

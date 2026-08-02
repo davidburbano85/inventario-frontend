@@ -92,6 +92,126 @@
         color .20s ease;
 
 }
+.encabezado__boton {
+
+    /* Convierte el botón en un contenedor flex sin ocupar todo el ancho */
+    display: flex;
+    width: 100%;
+
+    /* Centra verticalmente iconos y texto */
+    align-items: center;
+
+    /* Distribuye los elementos horizontalmente
+       Opciones:
+       - flex-start
+       - center
+       - space-between
+       - space-around
+       - space-evenly
+    */
+    justify-content: flex-start;
+
+    /* Espacio entre iconos y texto */
+    gap: .75rem;
+
+    /* Espacio interno
+       Primer valor: arriba y abajo
+       Segundo valor: izquierda y derecha
+    */
+    padding: .85rem 1rem;
+
+    /* Borde del botón
+       none
+       1px solid var(--color-borde)
+       2px solid red
+    */
+    border: none;
+
+    /* Redondeo de esquinas
+       0
+       .25rem
+       .5rem
+       var(--radio-md)
+       999px
+    */
+    border-radius: var(--radio-md);
+
+    /* Color de fondo
+       transparent
+       var(--color-superficie)
+       var(--color-superficie-secundaria)
+       var(--color-primario)
+    */
+    background: transparent;
+
+    /* Color del texto e iconos */
+    color: var(--color-texto);
+
+    /* Cambia el cursor al pasar el mouse */
+    cursor: pointer;
+
+    /* Impide seleccionar el texto del botón */
+    user-select: none;
+
+    /* Evita que el texto haga salto de línea */
+    white-space: nowrap;
+
+    /* Tamaño del texto */
+    font-size: 1rem;
+
+    /* Grosor del texto
+       400 normal
+       500 medio
+       600 semibold
+       700 bold
+    */
+    font-weight: 500;
+
+    /* Animaciones */
+    transition:
+        background-color .20s ease,
+        color .20s ease,
+        transform .15s ease,
+        box-shadow .20s ease;
+
+}
+
+/* Mouse encima */
+.encabezado__boton:hover {
+
+    /* Color del fondo al pasar el mouse */
+    background: var(--color-superficie-secundaria);
+
+    /* Color del texto al pasar el mouse */
+    color: var(--color-texto);
+
+}
+
+/* Mientras se hace clic */
+.encabezado__boton:active {
+
+    /* Hace un pequeño efecto de presión */
+    transform: scale(.98);
+
+}
+
+/* Cuando el botón recibe foco con TAB */
+.encabezado__boton:focus-visible {
+
+    /* Quita el borde azul del navegador */
+    outline: none;
+
+}
+
+.encabezado__boton:hover {
+
+    background-color: var(--color-superficie-secundaria);
+
+    border-color: var(--color-borde-secundario);
+
+}
+
+
 
 .menu-grupo-boton:hover {
 
